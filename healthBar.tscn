@@ -7,6 +7,7 @@
 [node name="ProgressBar" type="ProgressBar" parent="."]
 offset_left = 1.0
 offset_top = -5.0
-offset_right = 5.0
+offset_right = 95.0
 offset_bottom = 22.0
+value = 100.0
 script = ExtResource("1_k3ni6")
