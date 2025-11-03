@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		$Arrow.visible=true
 		$Arrow.look_at($ColorRect.position)
 		#$Arrow.rotation+=PI
-		$ColorRect.position=Input.get_vector("Left", "Right", "Up", "Down")*200
+		$ColorRect.position=Input.get_vector("Left", "Right", "Up", "Down")
 		rockVelocity+=delta*6
 		if(rockVelocity>10):
 			rockVelocity=10
@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		var newRock=rock.instantiate()
 		add_child(newRock)
 		newRock.position=Vector2.ZERO
-		newRock.linear_velocity=(position-$ColorRect.position)*rockVelocity
+		newRock.linear_velocity=(position-$ColorRect.position)*rockVelocity*200
 		rockVelocity=0
 		
 	shakePlayer()
