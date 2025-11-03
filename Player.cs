@@ -27,7 +27,7 @@ public partial class Player : CharacterBody2D
 
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+		Vector2 direction = Input.GetVector("MoveLeft", "MoveRight", "MoveUp", "MoveDown");
 		if (direction != Vector2.Zero)
 		{
 			velocity.X = direction.X * Speed;
@@ -38,11 +38,12 @@ public partial class Player : CharacterBody2D
 		}
 
 		Velocity = velocity;
-		//MoveAndSlide();
+		MoveAndSlide();
+
 		if (Input.IsActionPressed("Throw"))
 		{
 			GetNode<Node2D>("Arrow").Visible = true;
-			GetNode<Node2D>("Arrow").LookAt(GetNode<ColorRect>("ColorRect").Position);
+			GetNode<Node2D>("Arrow").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
 			GetNode<ColorRect>("ColorRect").Position = Input.GetVector("Left", "Right", "Up", "Down")*200;
 			rockVelocity += (float)delta * 6;
 
