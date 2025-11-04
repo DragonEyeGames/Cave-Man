@@ -6,6 +6,7 @@ public partial class Player : CharacterBody2D
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
 	private float rockVelocity = 0.0f;
+	private bool toggled = false;
 
 	[Export] public PackedScene rock;
 
@@ -40,11 +41,24 @@ public partial class Player : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 
+		if(Input.IsActionJustPressed("ToggleDirection"))
+		{
+			toggled = !toggled;
+		}
+
 		if (Input.IsActionPressed("Throw"))
 		{
 			GetNode<Node2D>("Arrow").Visible = true;
-			GetNode<Node2D>("Arrow").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
+			GetNode<Node2D>("Arrow").Scale = new Vector2(rockVelocity/250*(this.GlobalPosition.DistanceTo(GetNode<Control>("ColorRect").GlobalPosition)/200), GetNode<Node2D>("Arrow").Scale.Y);
+			GD.Print(GetNode<Node2D>("Arrow").Scale);
+			GD.Print((rockVelocity / 250) * (this.GlobalPosition.DistanceTo(GetNode<Node2D>("Arrow").GlobalPosition) / 200));
 			GetNode<ColorRect>("ColorRect").Position = Input.GetVector("Left", "Right", "Up", "Down")*200;
+			if(toggled)
+			{
+				GetNode<ColorRect>("ColorRect").Position = new Vector2(-GetNode<ColorRect>("ColorRect").Position.X, -GetNode<ColorRect>("ColorRect").Position.Y);
+
+			}
+			GetNode<Node2D>("Arrow").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
 			rockVelocity += (float)delta * 6;
 
 			if (rockVelocity > 10)
