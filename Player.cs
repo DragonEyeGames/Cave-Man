@@ -3,10 +3,13 @@ using System;
 
 public partial class Player : CharacterBody2D
 {
+	[Export] public int ID = 0;
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
 	private float rockVelocity = 0.0f;
 	private bool toggled = false;
+	private bool throwing = false;
+	private bool jumping = false;
 
 	[Export] public PackedScene rock;
 
@@ -21,14 +24,22 @@ public partial class Player : CharacterBody2D
 		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
-		{
+		if (jumping) {
+			jumping = false;
 			velocity.Y = JumpVelocity;
 		}
-
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
-		Vector2 direction = Input.GetVector("MoveLeft", "MoveRight", "MoveUp", "MoveDown");
+		float leftX = Input.GetJoyAxis(ID, JoyAxis.LeftX);
+		if (MathF.Abs(leftX) < .2f) {
+			leftX = 0.0f;
+		}
+		float leftY = Input.GetJoyAxis(ID, JoyAxis.LeftY);
+		if (MathF.Abs(leftY) < .2f)
+		{
+			leftY = 0.0f;
+		}
+		Vector2 direction = new Vector2(leftX, leftY);
 		if (direction != Vector2.Zero)
 		{
 			velocity.X = direction.X * Speed;
@@ -41,19 +52,25 @@ public partial class Player : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 
-		if(Input.IsActionJustPressed("ToggleDirection"))
-		{
-			toggled = !toggled;
-		}
-
-		if (Input.IsActionPressed("Throw"))
+		if (throwing)
 		{
 			GetNode<Node2D>("Arrow").Visible = true;
-			GetNode<Node2D>("Arrow").Scale = new Vector2(rockVelocity/250*(this.GlobalPosition.DistanceTo(GetNode<Control>("ColorRect").GlobalPosition)/200), GetNode<Node2D>("Arrow").Scale.Y);
+			GetNode<Node2D>("Arrow").Scale = new Vector2(rockVelocity / 250 * (this.GlobalPosition.DistanceTo(GetNode<Control>("ColorRect").GlobalPosition) / 200), GetNode<Node2D>("Arrow").Scale.Y);
 			GD.Print(GetNode<Node2D>("Arrow").Scale);
 			GD.Print((rockVelocity / 250) * (this.GlobalPosition.DistanceTo(GetNode<Node2D>("Arrow").GlobalPosition) / 200));
-			GetNode<ColorRect>("ColorRect").Position = Input.GetVector("Left", "Right", "Up", "Down")*200;
-			if(toggled)
+			float rightX = Input.GetJoyAxis(ID, JoyAxis.RightX);
+			if (MathF.Abs(rightX) < .2f)
+			{
+				rightX = 0.0f;
+			}
+			float rightY = Input.GetJoyAxis(ID, JoyAxis.RightY);
+			if (MathF.Abs(rightY) < .2f)
+			{
+				rightY = 0.0f;
+			}
+			Vector2 rightDirection = new Vector2(rightX, rightY);
+			GetNode<ColorRect>("ColorRect").Position = rightDirection * 200;
+			if (toggled)
 			{
 				GetNode<ColorRect>("ColorRect").Position = new Vector2(-GetNode<ColorRect>("ColorRect").Position.X, -GetNode<ColorRect>("ColorRect").Position.Y);
 
@@ -67,30 +84,6 @@ public partial class Player : CharacterBody2D
 			}
 
 		}
-		else if (Input.IsActionJustReleased("Throw"))
-		{
-			Node2D arrow = GetNode<Node2D>("Arrow");
-			arrow.Scale = new Vector2(arrow.Scale.X, .03f);
-
-			arrow.Visible = false;
-
-
-			RigidBody2D newRock = rock.Instantiate() as RigidBody2D;
-
-
-			AddChild(newRock);
-
-
-			newRock.Position = new Vector2(0, 0);
-
-
-			Vector2 dir = (GetNode<Control>("ColorRect").GlobalPosition - GlobalPosition).Normalized();
-			newRock.LinearVelocity = -(dir * rockVelocity * 200);
-
-
-			rockVelocity = 0.0f;
-
-		}
 		shakePlayer();
 	}
 
@@ -98,5 +91,58 @@ public partial class Player : CharacterBody2D
 	{
 		Node2D icon = GetNode<Node2D>("Icon");
 		icon.Position = new Vector2((float)GD.RandRange(-rockVelocity, rockVelocity), (float)GD.RandRange(-rockVelocity, rockVelocity));
+	}
+	
+	private void throwObject()
+	{
+		Node2D arrow = GetNode<Node2D>("Arrow");
+		arrow.Scale = new Vector2(arrow.Scale.X, .03f);
+
+		arrow.Visible = false;
+
+
+		Rock newRock = rock.Instantiate() as Rock;
+
+
+		GetParent().AddChild(newRock);
+
+		newRock.playerID = ID;
+
+		newRock.GlobalPosition = GlobalPosition;
+
+		Vector2 dir = (GetNode<Control>("ColorRect").GlobalPosition - GlobalPosition).Normalized();
+		newRock.LinearVelocity = -(dir * rockVelocity * 200);
+
+
+		rockVelocity = 0.0f;
+	}
+
+	public override void _Input(InputEvent @event)
+	{
+		GD.Print(@event.Device);
+		if(@event.Device==ID)
+		{
+			if (@event.IsActionPressed("ToggleDirection"))
+			{
+				toggled = !toggled;
+			}
+
+			if (@event.IsActionPressed("Throw"))
+			{
+				throwing = true;
+
+			}
+
+			if(@event.IsActionReleased("Throw") && throwing==true)
+			{
+				throwing = false;
+				throwObject();
+			}
+
+			if (@event.IsActionPressed("Jump") && IsOnFloor() && jumping==false)
+			{
+				jumping = true;
+			}
+		}
 	}
 }

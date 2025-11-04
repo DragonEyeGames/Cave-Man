@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\rock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:rock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rock.cs",
+              "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Rock.cs",
+              "RelativeDocumentMoniker": "Rock.cs",
+              "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Rock.cs",
+              "RelativeToolTip": "Rock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T17:18:06.631Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "Player.cs",
               "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAgwDgAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAowGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-03T16:34:35.831Z",
               "EditorCaption": ""

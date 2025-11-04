@@ -1,14 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bw2j1larpwer1"]
+[gd_scene load_steps=5 format=3 uid="uid://bw2j1larpwer1"]
 
+[ext_resource type="Script" uid="uid://cg2807r2fxjw" path="res://Rock.cs" id="1_68h2w"]
 [ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://icon.svg" id="1_o0qsl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
 radius = 18.1108
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_68h2w"]
+radius = 21.0
+
 [node name="Rock" type="RigidBody2D"]
 collision_layer = 2
 collision_mask = 3
 angular_velocity = 1.74533
+script = ExtResource("1_68h2w")
 
 [node name="Icon2" type="Sprite2D" parent="."]
 scale = Vector2(0.295, 0.295)
@@ -16,3 +21,12 @@ texture = ExtResource("1_o0qsl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4flbx")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_68h2w")
+
+[connection signal="body_entered" from="Area2D" to="." method="BodyEntered"]

@@ -29,3 +29,7 @@ texture = ExtResource("1_euhq5")
 
 [node name="Node2D" parent="." instance=ExtResource("1_7hdc5")]
 position = Vector2(539, 69)
+
+[node name="Node2D2" parent="." instance=ExtResource("1_7hdc5")]
+position = Vector2(752, 74)
+ID = 1
