@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Echofall"
-run/main_scene="uid://dfgtmf4hwotsg"
+run/main_scene="uid://chvyysljo0i3i"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://GameManager.cs"
 
 [dotnet]
 
@@ -72,6 +76,11 @@ ToggleDirection={
 ]
 }
 Jump={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+A={
 "deadzone": 0.2,
 "events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
 ]
