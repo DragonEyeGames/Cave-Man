@@ -13,8 +13,15 @@ public partial class Player : CharacterBody2D
 
 	[Export] public PackedScene rock;
 
+	public override void _Ready()
+	{
+		Modulate = GetRandomColor();
+		GetNode<RichTextLabel>("RichTextLabel").Text = "Player " + ID+1;
+	}
+
 	public override void _PhysicsProcess(double delta)
 	{
+		GetNode<RichTextLabel>("RichTextLabel").Text = "Player " + (ID + 1);
 		Vector2 velocity = Velocity;
 
 		// Add the gravity.
@@ -144,5 +151,16 @@ public partial class Player : CharacterBody2D
 				jumping = true;
 			}
 		}
+	}
+
+	public Color GetRandomColor()
+	{
+		// Generate random float values between 0.0 and 1.0 for R, G, B, and A
+		float r = GD.Randf();
+		float g = GD.Randf();
+		float b = GD.Randf();
+		float a = 1.0f; // You can also randomize alpha if needed: GD.Randf()
+
+		return new Color(r, g, b, a);
 	}
 }
