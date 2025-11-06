@@ -42,15 +42,15 @@ script = ExtResource("4_ta566")
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="Markers"]
-position = Vector2(325, 62)
+position = Vector2(173, 62)
 
 [node name="Marker2D2" type="Marker2D" parent="Markers"]
-position = Vector2(756, 60)
+position = Vector2(896, 72)
 
 [node name="Marker2D3" type="Marker2D" parent="Markers"]
-position = Vector2(598, -63)
+position = Vector2(721, -77)
 
 [node name="Marker2D4" type="Marker2D" parent="Markers"]
-position = Vector2(428, -69)
+position = Vector2(352, -79)
 
 [node name="Players" type="Node2D" parent="."]
