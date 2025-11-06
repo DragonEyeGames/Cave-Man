@@ -34,3 +34,17 @@ position = Vector2(539, 69)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(545, 179)
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="Markers"]
+position = Vector2(325, 62)
+
+[node name="Marker2D2" type="Marker2D" parent="Markers"]
+position = Vector2(756, 60)
+
+[node name="Marker2D3" type="Marker2D" parent="Markers"]
+position = Vector2(598, -63)
+
+[node name="Marker2D4" type="Marker2D" parent="Markers"]
+position = Vector2(428, -69)

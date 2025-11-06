@@ -12,6 +12,9 @@ public partial class Main : Node2D
 			Node player = GetNode<Player>("Player").Duplicate();
 			Player newPlayer = player as Player;
 			AddChild(newPlayer);
+			var marker = GetNode<Node2D>("Markers").GetChild(i);
+			Marker2D marker2D = marker as Marker2D;
+			newPlayer.GlobalPosition = marker2D.GlobalPosition;
 			GD.Print(i);
 			newPlayer.ID = i;
 			GetNode<Player>("Player").QueueFree();
