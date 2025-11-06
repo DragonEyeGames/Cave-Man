@@ -1,8 +1,7 @@
+using Godot;
+using System;
 
 
-public partial class healthBar : ProgressBar
-{
-}
 public partial class HealthBar : Control
 {
 	// The progress bar node reference
@@ -42,6 +41,8 @@ public partial class HealthBar : Control
 	// Update the UI
 	private void UpdateHealthBar()
 	{
+		
 		_bar.Value = (float)_currentHealth / _maxHealth * 100f;
+	}
 	
-	
+}
