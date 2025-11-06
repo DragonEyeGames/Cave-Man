@@ -5,11 +5,12 @@ public partial class Player : CharacterBody2D
 {
 	[Export] public int ID = 0;
 	public const float Speed = 300.0f;
-	public const float JumpVelocity = -400.0f;
+	public const float JumpVelocity = -800.0f;
 	private float rockVelocity = 0.0f;
 	private bool toggled = false;
 	private bool throwing = false;
 	private bool jumping = false;
+	private int health = 100;
 
 	[Export] public PackedScene rock;
 
@@ -63,8 +64,6 @@ public partial class Player : CharacterBody2D
 		{
 			GetNode<Node2D>("Arrow").Visible = true;
 			GetNode<Node2D>("Arrow").Scale = new Vector2(rockVelocity / 250 * (this.GlobalPosition.DistanceTo(GetNode<Control>("ColorRect").GlobalPosition) / 200), GetNode<Node2D>("Arrow").Scale.Y);
-			GD.Print(GetNode<Node2D>("Arrow").Scale);
-			GD.Print((rockVelocity / 250) * (this.GlobalPosition.DistanceTo(GetNode<Node2D>("Arrow").GlobalPosition) / 200));
 			float rightX = Input.GetJoyAxis(ID, JoyAxis.RightX);
 			if (MathF.Abs(rightX) < .2f)
 			{
@@ -126,7 +125,6 @@ public partial class Player : CharacterBody2D
 
 	public override void _Input(InputEvent @event)
 	{
-		GD.Print(@event.Device);
 		if(@event.Device==ID)
 		{
 			if (@event.IsActionPressed("ToggleDirection"))
@@ -162,5 +160,18 @@ public partial class Player : CharacterBody2D
 		float a = 1.0f; // You can also randomize alpha if needed: GD.Randf()
 
 		return new Color(r, g, b, a);
+	}
+
+	public void Damage(int damage)
+	{
+		health-=damage;
+		if(health<=0)
+		{
+			QueueFree();
+		} else
+		{
+			GetNode<ProgressBar>("Health").Value = health;
+		}
+
 	}
 }

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfgtmf4hwotsg"]
+[gd_scene load_steps=7 format=3 uid="uid://dfgtmf4hwotsg"]
 
 [ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://player.tscn" id="1_7hdc5"]
 [ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://icon.svg" id="1_euhq5"]
 [ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Main.cs" id="1_qvw8d"]
+[ext_resource type="Script" uid="uid://hkqeaukcg5tw" path="res://Camera2d.cs" id="4_ta566"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
@@ -15,6 +16,7 @@ script = ExtResource("1_qvw8d")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(545, 347)
+scale = Vector2(1.58, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-15.5, -41)
@@ -23,6 +25,7 @@ shape = SubResource("RectangleShape2D_e231j")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(11.25, 298)
 shape = SubResource("RectangleShape2D_7hdc5")
+disabled = true
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(-12, -39.5)
@@ -34,6 +37,7 @@ position = Vector2(539, 69)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(545, 179)
+script = ExtResource("4_ta566")
 
 [node name="Markers" type="Node2D" parent="."]
 
@@ -48,3 +52,5 @@ position = Vector2(598, -63)
 
 [node name="Marker2D4" type="Marker2D" parent="Markers"]
 position = Vector2(428, -69)
+
+[node name="Players" type="Node2D" parent="."]

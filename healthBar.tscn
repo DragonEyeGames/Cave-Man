@@ -17,9 +17,3 @@ offset_right = 95.0
 offset_bottom = 36.0
 value = 100.0
 script = ExtResource("1_k3ni6")
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
-layout_mode = 0
-offset_top = 8.0
-offset_right = 96.0
-offset_bottom = 37.0
