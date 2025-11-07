@@ -11,28 +11,28 @@ script = ExtResource("1_vixnb")
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="Markers"]
-position = Vector2(423, 142)
+position = Vector2(325, 5)
 
 [node name="Icon" type="Sprite2D" parent="Markers/Marker2D"]
 position = Vector2(1, 1)
 texture = ExtResource("2_5lntk")
 
 [node name="Marker2D2" type="Marker2D" parent="Markers"]
-position = Vector2(896, 72)
+position = Vector2(338, -11)
 
 [node name="Icon" type="Sprite2D" parent="Markers/Marker2D2"]
 position = Vector2(1, 1)
 texture = ExtResource("2_5lntk")
 
 [node name="Marker2D3" type="Marker2D" parent="Markers"]
-position = Vector2(721, -77)
+position = Vector2(1152, 20)
 
 [node name="Icon" type="Sprite2D" parent="Markers/Marker2D3"]
 position = Vector2(1, 1)
 texture = ExtResource("2_5lntk")
 
 [node name="Marker2D4" type="Marker2D" parent="Markers"]
-position = Vector2(352, -79)
+position = Vector2(344, -25)
 
 [node name="Icon" type="Sprite2D" parent="Markers/Marker2D4"]
 position = Vector2(1, 1)
