@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dktyi0tyvsyqp"]
+[gd_scene load_steps=8 format=3 uid="uid://dktyi0tyvsyqp"]
 
 [ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://b68vgg378wbeo" path="res://Player.cs" id="1_i3pqv"]
@@ -8,6 +8,16 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
 radius = 66.0
 height = 132.0
+
+[sub_resource type="Gradient" id="Gradient_hqtel"]
+offsets = PackedFloat32Array(0.0194805, 0.38961, 0.811688)
+colors = PackedColorArray(1, 1, 1, 1, 0.491803, 0.491803, 0.491803, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sweqy"]
+gradient = SubResource("Gradient_hqtel")
+fill = 1
+fill_from = Vector2(0.513761, 0.495413)
+fill_to = Vector2(0.169725, 0.192661)
 
 [node name="Node2D2" type="CharacterBody2D"]
 collision_layer = 4
@@ -49,3 +59,8 @@ offset_top = -134.0
 offset_right = 42.0
 offset_bottom = -107.0
 value = 100.0
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.5
+texture = SubResource("GradientTexture2D_sweqy")
+texture_scale = 4.81
