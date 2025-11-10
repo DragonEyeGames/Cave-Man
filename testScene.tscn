@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlqqobhpk125u"]
+
+[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://icon.svg" id="2_5lntk"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(11, 0)
+
+[node name="Markers" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="Markers"]
+position = Vector2(-1290, -708)
+
+[node name="Icon" type="Sprite2D" parent="Markers/Marker2D"]
+position = Vector2(1, 1)
+texture = ExtResource("2_5lntk")
+
+[node name="Marker2D2" type="Marker2D" parent="Markers"]
+position = Vector2(1944, 400)
+
+[node name="Icon" type="Sprite2D" parent="Markers/Marker2D2"]
+position = Vector2(1, 1)
+texture = ExtResource("2_5lntk")
+
+[node name="Marker2D3" type="Marker2D" parent="Markers"]
+position = Vector2(1864, 267)
+
+[node name="Icon" type="Sprite2D" parent="Markers/Marker2D3"]
+position = Vector2(1, 1)
+texture = ExtResource("2_5lntk")
+
+[node name="Marker2D4" type="Marker2D" parent="Markers"]
+position = Vector2(344, -25)
+
+[node name="Icon" type="Sprite2D" parent="Markers/Marker2D4"]
+position = Vector2(1, 1)
+texture = ExtResource("2_5lntk")

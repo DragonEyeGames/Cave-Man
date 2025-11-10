@@ -2,10 +2,10 @@ using Godot;
 using System;
 
 
-public partial class HealthBar : Control
+public partial class HealthBar : ProgressBar
 {
 	// The progress bar node reference
-	private TextureProgressBar _bar;
+	private ProgressBar _bar;
 
 	// Max health is 100
 	private int _maxHealth = 100;
@@ -16,7 +16,7 @@ public partial class HealthBar : Control
 	public override void _Ready()
 	{
 		// Get the HealthBar node
-		_bar = GetNode<TextureProgressBar>("HealthBar");
+		_bar = this;
 		UpdateHealthBar();
 	}
 
