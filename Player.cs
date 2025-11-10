@@ -65,15 +65,7 @@ public partial class Player : CharacterBody2D
 			GetNode<Node2D>("Arrow").Visible = true;
 			GetNode<Node2D>("Arrow").Scale = new Vector2(rockVelocity / 250 * (this.GlobalPosition.DistanceTo(GetNode<Control>("ColorRect").GlobalPosition) / 200), GetNode<Node2D>("Arrow").Scale.Y);
 			float rightX = Input.GetJoyAxis(ID, JoyAxis.RightX);
-			if (MathF.Abs(rightX) < .2f)
-			{
-				rightX = 0.0f;
-			}
 			float rightY = Input.GetJoyAxis(ID, JoyAxis.RightY);
-			if (MathF.Abs(rightY) < .2f)
-			{
-				rightY = 0.0f;
-			}
 			Vector2 rightDirection = new Vector2(rightX, rightY);
 			GetNode<ColorRect>("ColorRect").Position = rightDirection * 200;
 			if (toggled)
@@ -110,7 +102,7 @@ public partial class Player : CharacterBody2D
 		Rock newRock = rock.Instantiate() as Rock;
 
 
-		GetParent().AddChild(newRock);
+		GetParent().GetParent().AddChild(newRock);
 
 		newRock.playerID = ID;
 

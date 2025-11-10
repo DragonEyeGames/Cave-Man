@@ -3,6 +3,8 @@ using System;
 
 public partial class Camera : Camera2D
 {
+	[Export]
+	int margin = 5;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -11,33 +13,60 @@ public partial class Camera : Camera2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		Node first = GetNode<Node2D>("../Players").GetChild(0);
+		Node2D firstNode = first as Node2D;
+
+		float minX = firstNode.Position.X;
+		float maxX = firstNode.Position.X;
 		float x = 0.0f;
-		foreach(Marker2D child in GetNode("../Markers").GetChildren()) {
+		foreach(Node2D child in GetNode("../Players").GetChildren()) {
 			Node2D newChild = child as Node2D;
-			x += newChild.GlobalPosition.X;
-		}
-		x/=GetNode("../Markers").GetChildren().Count;
-		
-		float y = 0.0f;
-		foreach(Marker2D child in GetNode("../Markers").GetChildren()) {
-			Node2D newChild = child as Node2D;
-			y += newChild.GlobalPosition.Y;
-		}
-		y/=GetNode("../Markers").GetChildren().Count;
-		GlobalPosition = new Vector2(x, y);
-		
-		var biggestX = 0.0f;
-		foreach(Marker2D child in GetNode("../Markers").GetChildren()) {
-			Node2D newChild = child as Node2D;
-			if(MathF.Abs(newChild.GlobalPosition.X)>MathF.Abs(biggestX)) {
-				biggestX=newChild.GlobalPosition.X;
+			if(newChild.Position.X<minX)
+			{
+				minX = newChild.Position.X;
+			}
+			if(newChild.Position.X>maxX)
+			{
+				maxX = newChild.Position.X;
 			}
 		}
-		GD.Print("AHEAHE" + (biggestX-GlobalPosition.X));
-		if(MathF.Abs(biggestX-GlobalPosition.X) > GetViewport().GetVisibleRect().Size.X/2) {
-			Zoom = new Vector2(Zoom.X - .1f, Zoom.Y - .1f);
+		x = (minX + maxX);
+		x /= 2;
+
+		float minY = firstNode.Position.Y;
+		float maxY = firstNode.Position.Y;
+		float y = 0.0f;
+		foreach (Node2D child in GetNode("../Players").GetChildren())
+		{
+			Node2D newChild = child as Node2D;
+			if (newChild.Position.Y < minY)
+			{
+				minY = newChild.Position.Y;
+			}
+			if (newChild.Position.Y > maxY)
+			{
+				maxY = newChild.Position.Y;
+			}
 		}
-		GD.Print(GetViewport().GetVisibleRect().Size.X + " AAH " + MathF.Abs(biggestX-GlobalPosition.X));
-		x/=GetNode("../Markers").GetChildren().Count;
+		y = (minY + maxY);
+		y /= 2;
+
+		GlobalPosition = new Vector2(x, y);
+
+		Vector2 viewportSize = GetViewportRect().Size;
+		float distance = Mathf.Abs(maxX - minX);
+		float zoomX = (distance + margin) / viewportSize.X;
+		float distanceY = Mathf.Abs(maxY - minY);
+		float zoomY = (distanceY + margin) / viewportSize.Y;
+		float biggerZoom = 0.0f;
+		if (zoomX > zoomY)
+		{
+			biggerZoom = zoomX;
+		}
+		else
+		{
+			biggerZoom = zoomY;
+		}
+		Zoom = new Vector2(1 / biggerZoom, 1/biggerZoom);
 	}
 }

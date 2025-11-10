@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://player.tscn" id="1_7hdc5"]
 [ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://icon.svg" id="1_euhq5"]
 [ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Main.cs" id="1_qvw8d"]
-[ext_resource type="Script" uid="uid://hkqeaukcg5tw" path="res://Camera2d.cs" id="4_ta566"]
+[ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Camera.cs" id="4_ta566"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
@@ -38,6 +38,7 @@ position = Vector2(539, 69)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(545, 179)
 script = ExtResource("4_ta566")
+margin = 200
 
 [node name="Markers" type="Node2D" parent="."]
 
