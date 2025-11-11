@@ -61,6 +61,14 @@ offset_bottom = -107.0
 value = 100.0
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1, -4)
 energy = 0.5
+texture = SubResource("GradientTexture2D_sweqy")
+texture_scale = 4.81
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(-1.50002, -120.96)
+scale = Vector2(0.841346, 0.214137)
+energy = 0.3
 texture = SubResource("GradientTexture2D_sweqy")
 texture_scale = 4.81

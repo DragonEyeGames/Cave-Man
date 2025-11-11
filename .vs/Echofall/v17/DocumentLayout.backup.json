@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Camera.cs",
               "RelativeDocumentMoniker": "Camera.cs",
               "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Camera.cs",
               "RelativeToolTip": "Camera.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAiwEQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAiwDkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-10T16:31:36.853Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Camera2d.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T16:53:17.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-06T16:53:17.423Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Main.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAqwBMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T17:09:41.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T17:09:41.579Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "GameManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T17:00:24.82Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T17:00:24.82Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "ControllerConnecting.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwB4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T16:34:55.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T16:34:55.775Z"
             },
             {
               "$type": "Document",
@@ -119,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",

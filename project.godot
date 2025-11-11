@@ -95,3 +95,7 @@ Menu={
 [layer_names]
 
 2d_physics/layer_3="PlayerArea"
+
+[rendering]
+
+viewport/hdr_2d=true

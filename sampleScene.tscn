@@ -8,8 +8,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hdc5"]
-size = Vector2(1258.5, 73)
+[sub_resource type="Environment" id="Environment_ta566"]
+glow_enabled = true
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_qvw8d")
@@ -19,26 +19,92 @@ position = Vector2(545, 347)
 scale = Vector2(1.58, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-15.5, -41)
+position = Vector2(402.532, -144)
+scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(11.25, 298)
-shape = SubResource("RectangleShape2D_7hdc5")
-disabled = true
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+modulate = Color(1.5, 1, 1, 1)
+position = Vector2(3.49997, 1.5)
+scale = Vector2(4.59375, 0.632812)
+texture = ExtResource("1_euhq5")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-12, -39.5)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(24.6835, 163)
+scale = Vector2(0.695, 1)
+shape = SubResource("RectangleShape2D_e231j")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D2"]
+modulate = Color(1.5, 1, 1, 1)
+position = Vector2(3.49997, 1.5)
+scale = Vector2(4.59375, 0.632812)
+texture = ExtResource("1_euhq5")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-301.899, -174)
+scale = Vector2(0.695, 1)
+shape = SubResource("RectangleShape2D_e231j")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D7"]
+modulate = Color(1.5, 1, 1, 1)
+position = Vector2(3.49997, 1.5)
+scale = Vector2(4.59375, 0.632812)
+texture = ExtResource("1_euhq5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(12.0253, 414)
+scale = Vector2(2.505, 1)
+shape = SubResource("RectangleShape2D_e231j")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D3"]
+modulate = Color(1.5, 1, 1, 1)
+position = Vector2(3.49997, 1.5)
+scale = Vector2(4.59375, 0.632812)
+texture = ExtResource("1_euhq5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(24.0506, -824)
+scale = Vector2(2.505, 1)
+shape = SubResource("RectangleShape2D_e231j")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D4"]
+modulate = Color(1.5, 1, 1, 1)
+position = Vector2(3.49997, 1.5)
+scale = Vector2(4.59375, 0.632812)
+texture = ExtResource("1_euhq5")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(772.152, -158)
+rotation = 1.5708
+scale = Vector2(2.505, 1)
+shape = SubResource("RectangleShape2D_e231j")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D5"]
+modulate = Color(1.5, 1, 1, 1)
+position = Vector2(3.49997, 1.5)
+scale = Vector2(4.59375, 0.632812)
+texture = ExtResource("1_euhq5")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-673.418, -206)
+rotation = 1.5708
+scale = Vector2(2.505, 1)
+shape = SubResource("RectangleShape2D_e231j")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D6"]
+modulate = Color(1.5, 1, 1, 1)
+position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
 texture = ExtResource("1_euhq5")
 
 [node name="Player" parent="." instance=ExtResource("1_7hdc5")]
-position = Vector2(539, 69)
+position = Vector2(542, 69)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(545, 179)
+position = Vector2(548, 179)
 script = ExtResource("4_ta566")
 margin = 200
+minZoom = 1.2
 
 [node name="Markers" type="Node2D" parent="."]
 
@@ -57,7 +123,7 @@ position = Vector2(352, -79)
 [node name="Players" type="Node2D" parent="."]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-energy = 0.01
+energy = 0.05
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
@@ -68,3 +134,7 @@ offset_left = -4644.0
 offset_top = -3179.0
 offset_right = 6905.0
 offset_bottom = 6292.0
+color = Color(0.133196, 0.133196, 0.133196, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ta566")
