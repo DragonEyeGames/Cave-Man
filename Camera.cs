@@ -5,8 +5,10 @@ public partial class Camera : Camera2D
 {
 	[Export]
 	int margin = 5;
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+	[Export]
+	float minZoom = 5.0f;
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
 	{
 	}
 
@@ -66,6 +68,10 @@ public partial class Camera : Camera2D
 		else
 		{
 			biggerZoom = zoomY;
+		}
+		if(biggerZoom < minZoom)
+		{
+			biggerZoom = minZoom;
 		}
 		Zoom = new Vector2(1 / biggerZoom, 1/biggerZoom);
 	}

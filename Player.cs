@@ -5,12 +5,14 @@ public partial class Player : CharacterBody2D
 {
 	[Export] public int ID = 0;
 	public const float Speed = 300.0f;
-	public const float JumpVelocity = -800.0f;
+	public const float JumpVelocity = -180.0f;
 	private float rockVelocity = 0.0f;
 	private bool toggled = false;
 	private bool throwing = false;
 	private bool jumping = false;
 	private int health = 100;
+	private double jumpTime = 0.0;
+	private bool dropVelocity = false;
 
 	[Export] public PackedScene rock;
 
@@ -33,8 +35,19 @@ public partial class Player : CharacterBody2D
 
 		// Handle Jump.
 		if (jumping) {
-			jumping = false;
-			velocity.Y = JumpVelocity;
+			velocity.Y += JumpVelocity;
+			jumpTime += delta;
+			if (jumpTime > 0.15)
+			{
+				jumpTime = 0.0;
+				velocity.Y /= 2;
+				jumping = false;
+			}
+		}
+		if(dropVelocity)
+		{
+			velocity.Y /= 2;
+			dropVelocity = false;
 		}
 		// Get the input direction and handle the movement/deceleration.
 		// As good practice, you should replace UI actions with custom gameplay actions.
@@ -139,6 +152,11 @@ public partial class Player : CharacterBody2D
 			if (@event.IsActionPressed("Jump") && IsOnFloor() && jumping==false)
 			{
 				jumping = true;
+			}
+			if (@event.IsActionReleased("Jump") && jumping)
+			{
+				jumping = false;
+				dropVelocity = true;
 			}
 		}
 	}
