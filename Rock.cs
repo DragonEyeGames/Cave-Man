@@ -23,7 +23,9 @@ public partial class Rock : RigidBody2D
 			var player = (Player)body;
 			if(player.ID != playerID)
 			{
-				player.QueueFree();
+				GD.Print(Mathf.Round(LinearVelocity.Length() / 50));
+				player.Damage((int)Mathf.Round(LinearVelocity.Length()/50));
+
 			}
 		}
 	}

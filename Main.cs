@@ -11,7 +11,7 @@ public partial class Main : Node2D
 		{
 			Node player = GetNode<Player>("Player").Duplicate();
 			Player newPlayer = player as Player;
-			AddChild(newPlayer);
+			GetNode("Players").AddChild(newPlayer);
 			var marker = GetNode<Node2D>("Markers").GetChild(i);
 			Marker2D marker2D = marker as Marker2D;
 			newPlayer.GlobalPosition = marker2D.GlobalPosition;
@@ -25,5 +25,9 @@ public partial class Main : Node2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if(Input.IsActionJustPressed("Menu"))
+		{
+			GetTree().ChangeSceneToFile("res://sampleScene.tscn");
+		}
 	}
 }
