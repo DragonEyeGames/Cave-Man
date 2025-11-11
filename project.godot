@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Echofall"
-run/main_scene="uid://bcwtlyd232gut"
+run/main_scene="uid://d101fivlwf2av"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
