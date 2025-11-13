@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://dv2l22toqsh7r"]
+
+[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://b68vgg378wbeo" path="res://Scripts/Player.cs" id="1_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://bw2j1larpwer1" path="res://Scenes/rock.tscn" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://cp7b6ell8p8df" path="res://Art/Arrow.png" id="4_hqtel"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
+radius = 66.0
+height = 132.0
+
+[sub_resource type="Gradient" id="Gradient_hqtel"]
+offsets = PackedFloat32Array(0.0194805, 0.38961, 0.811688)
+colors = PackedColorArray(1, 1, 1, 1, 0.491803, 0.491803, 0.491803, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sweqy"]
+gradient = SubResource("Gradient_hqtel")
+fill = 1
+fill_from = Vector2(0.513761, 0.495413)
+fill_to = Vector2(0.169725, 0.192661)
+
+[node name="Node2D2" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_i3pqv")
+ID = null
+rock = ExtResource("2_i3pqv")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4flbx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Arrow" type="Sprite2D" parent="."]
+visible = false
+rotation = -5.55015
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("4_hqtel")
+offset = Vector2(-4248.45, 191.13)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -61.0
+offset_top = -105.0
+offset_right = 57.0
+offset_bottom = -70.0
+theme_override_font_sizes/normal_font_size = 22
+text = "Player 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="health" type="ProgressBar" parent="."]
+offset_left = -53.0
+offset_top = -134.0
+offset_right = 42.0
+offset_bottom = -107.0
+value = 100.0
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1, -4)
+energy = 0.5
+texture = SubResource("GradientTexture2D_sweqy")
+texture_scale = 4.81
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(-1.50002, -120.96)
+scale = Vector2(0.841346, 0.214137)
+energy = 0.3
+texture = SubResource("GradientTexture2D_sweqy")
+texture_scale = 4.81
