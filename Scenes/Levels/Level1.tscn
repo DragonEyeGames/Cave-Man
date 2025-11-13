@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dfgtmf4hwotsg"]
 
-[ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://player.tscn" id="1_7hdc5"]
-[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://icon.svg" id="1_euhq5"]
-[ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Main.cs" id="1_qvw8d"]
-[ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Camera.cs" id="4_ta566"]
+[ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="1_7hdc5"]
+[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="1_euhq5"]
+[ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_qvw8d"]
+[ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Scripts/Camera.cs" id="4_ta566"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
@@ -24,7 +24,6 @@ scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-modulate = Color(1.5, 1, 1, 1)
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
 texture = ExtResource("1_euhq5")
@@ -35,7 +34,6 @@ scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D2"]
-modulate = Color(1.5, 1, 1, 1)
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
 texture = ExtResource("1_euhq5")
@@ -46,7 +44,6 @@ scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D7"]
-modulate = Color(1.5, 1, 1, 1)
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
 texture = ExtResource("1_euhq5")
@@ -57,7 +54,6 @@ scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D3"]
-modulate = Color(1.5, 1, 1, 1)
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
 texture = ExtResource("1_euhq5")
@@ -68,7 +64,6 @@ scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D4"]
-modulate = Color(1.5, 1, 1, 1)
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
 texture = ExtResource("1_euhq5")
@@ -80,7 +75,6 @@ scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D5"]
-modulate = Color(1.5, 1, 1, 1)
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
 texture = ExtResource("1_euhq5")
@@ -92,7 +86,6 @@ scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D6"]
-modulate = Color(1.5, 1, 1, 1)
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
 texture = ExtResource("1_euhq5")

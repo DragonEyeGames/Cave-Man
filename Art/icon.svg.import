@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bk6ojexahyenb"
-path="res://.godot/imported/xBoxController.png-91c5d710699247904692ad4a9e00b2f1.ctex"
+uid="uid://4fhi51806q4k"
+path="res://.godot/imported/icon.svg-750f30f6912a3e29e1f50a8e1a7e4a3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://xBoxController.png"
-dest_files=["res://.godot/imported/xBoxController.png-91c5d710699247904692ad4a9e00b2f1.ctex"]
+source_file="res://Art/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-750f30f6912a3e29e1f50a8e1a7e4a3e.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
