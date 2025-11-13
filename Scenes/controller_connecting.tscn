@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chvyysljo0i3i"]
 
-[ext_resource type="Script" uid="uid://j7irs1w1v5v2" path="res://Scripts/ControllerConnecting.cs" id="1_qyldj"]
-[ext_resource type="Texture2D" uid="uid://bk6ojexahyenb" path="res://Art/xBoxController.png" id="1_whdaa"]
+[ext_resource type="Script" uid="uid://j7irs1w1v5v2" path="res://Scripts/ControllerConnecting.cs" id="1_f5l4c"]
+[ext_resource type="Texture2D" uid="uid://bk6ojexahyenb" path="res://Art/xBoxController.png" id="2_tjfwa"]
 
 [node name="Controller Connecting" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qyldj")
+script = ExtResource("1_f5l4c")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -36,7 +36,7 @@ layout_mode = 2
 z_index = 1
 position = Vector2(129, 88)
 scale = Vector2(0.78, 0.78)
-texture = ExtResource("1_whdaa")
+texture = ExtResource("2_tjfwa")
 
 [node name="ColorRect" type="ColorRect" parent="Container/0"]
 layout_mode = 1
@@ -66,7 +66,7 @@ layout_mode = 2
 z_index = 1
 position = Vector2(129, 88)
 scale = Vector2(0.78, 0.78)
-texture = ExtResource("1_whdaa")
+texture = ExtResource("2_tjfwa")
 
 [node name="ColorRect" type="ColorRect" parent="Container/1"]
 layout_mode = 1
@@ -96,7 +96,7 @@ layout_mode = 2
 z_index = 1
 position = Vector2(129, 88)
 scale = Vector2(0.78, 0.78)
-texture = ExtResource("1_whdaa")
+texture = ExtResource("2_tjfwa")
 
 [node name="ColorRect" type="ColorRect" parent="Container/2"]
 layout_mode = 1
@@ -126,7 +126,7 @@ layout_mode = 2
 z_index = 1
 position = Vector2(129, 88)
 scale = Vector2(0.78, 0.78)
-texture = ExtResource("1_whdaa")
+texture = ExtResource("2_tjfwa")
 
 [node name="ColorRect" type="ColorRect" parent="Container/3"]
 layout_mode = 1

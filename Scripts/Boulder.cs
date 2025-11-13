@@ -1,10 +1,10 @@
 using Godot;
 using System;
 
-public partial class Rock : Projectile
+public partial class Boulder : Projectile
 {
 	private bool velocityDamage = true;
-	private float damageMultiplier = 0.5f;
+	private float damageMultiplier = 1.2f;
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)

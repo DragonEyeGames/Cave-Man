@@ -28,7 +28,7 @@ public partial class ControllerConnecting : Control
 		if (Input.IsActionJustPressed("A"))
 		{
 			GameManager.connectedControllers = Input.GetConnectedJoypads().Count;
-			GetTree().ChangeSceneToFile("res://sampleScene.tscn");
+			GetTree().ChangeSceneToFile("res://Scenes/Levels/Level1.tscn");
 		}
 	}
 
