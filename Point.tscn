@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccr8itbo2uf8j"]
+
+[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://icon.svg" id="1_exf6f"]
+[ext_resource type="Script" uid="uid://bukpcue4tmwa4" path="res://healthBar.cs" id="1_ggm1s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ggm1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_exf6f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="VFlowContainer" type="VFlowContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 63.0
+
+[node name="health" type="ProgressBar" parent="VFlowContainer"]
+layout_mode = 2
+script = ExtResource("1_ggm1s")
+
+[node name="score" type="Label" parent="VFlowContainer"]
+layout_mode = 2
+text = "6515684154187413616541"
+
+[node name="lives" type="AnimatedSprite2D" parent="."]
+position = Vector2(15.5, 64.5)
+scale = Vector2(0.210938, 0.195313)
+sprite_frames = SubResource("SpriteFrames_ggm1s")

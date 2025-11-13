@@ -7,8 +7,8 @@ public partial class Camera : Camera2D
 	int margin = 5;
 	[Export]
 	float minZoom = 5.0f;
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
 	{
 	}
 
