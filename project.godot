@@ -13,11 +13,11 @@ config_version=5
 config/name="Echofall"
 run/main_scene="uid://chvyysljo0i3i"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Art/icon.svg"
 
 [autoload]
 
-GameManager="*res://GameManager.cs"
+GameManager="*res://Scripts/GameManager.cs"
 
 [display]
 

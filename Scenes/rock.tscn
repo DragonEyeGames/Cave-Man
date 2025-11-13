@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bw2j1larpwer1"]
 
-[ext_resource type="Script" uid="uid://cg2807r2fxjw" path="res://Rock.cs" id="1_68h2w"]
-[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://icon.svg" id="1_o0qsl"]
+[ext_resource type="Script" uid="uid://cg2807r2fxjw" path="res://Scripts/Rock.cs" id="1_68h2w"]
+[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="1_o0qsl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
 radius = 18.1108
