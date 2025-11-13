@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bw2j1larpwer1"]
 
-[ext_resource type="Script" uid="uid://cg2807r2fxjw" path="res://Scripts/Rock.cs" id="1_68h2w"]
-[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="1_o0qsl"]
+[ext_resource type="Script" uid="uid://cg2807r2fxjw" path="res://Scripts/Rock.cs" id="1_5mkji"]
+[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="2_vd8au"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
 radius = 18.1108
@@ -23,11 +23,11 @@ fill_to = Vector2(0.169725, 0.192661)
 collision_layer = 2
 collision_mask = 3
 angular_velocity = 1.74533
-script = ExtResource("1_68h2w")
+script = ExtResource("1_5mkji")
 
 [node name="Icon2" type="Sprite2D" parent="."]
 scale = Vector2(0.295, 0.295)
-texture = ExtResource("1_o0qsl")
+texture = ExtResource("2_vd8au")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4flbx")
