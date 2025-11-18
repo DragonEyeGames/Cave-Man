@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dktyi0tyvsyqp"]
+[gd_scene load_steps=10 format=3 uid="uid://dktyi0tyvsyqp"]
 
 [ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://b68vgg378wbeo" path="res://Scripts/Player.cs" id="1_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://bw2j1larpwer1" path="res://Scenes/rock.tscn" id="2_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://l5vp4ipsh1qf" path="res://Scenes/bomb.tscn" id="3_x3wgy"]
+[ext_resource type="PackedScene" uid="uid://coo6klj3plb8e" path="res://Scenes/boulder.tscn" id="4_3smsa"]
 [ext_resource type="Texture2D" uid="uid://cp7b6ell8p8df" path="res://Art/Arrow.png" id="4_hqtel"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
@@ -23,6 +25,8 @@ fill_to = Vector2(0.169725, 0.192661)
 collision_layer = 4
 script = ExtResource("1_i3pqv")
 rock = ExtResource("2_i3pqv")
+bomb = ExtResource("3_x3wgy")
+boulder = ExtResource("4_3smsa")
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
