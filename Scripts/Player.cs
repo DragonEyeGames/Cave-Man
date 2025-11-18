@@ -10,11 +10,12 @@ public partial class Player : CharacterBody2D
 	private bool toggled = false;
 	private bool throwing = false;
 	private bool jumping = false;
-	private int health = 100;
+	private float health = 100.0f;
 	private double jumpTime = 0.0;
 	private bool dropVelocity = false;
 
 	[Export] public PackedScene rock;
+	[Export] public PackedScene boulder;
 
 	public override void _Ready()
 	{
@@ -111,18 +112,24 @@ public partial class Player : CharacterBody2D
 
 		arrow.Visible = false;
 
+		Projectile newProjectile = null;
+		if(GD.RandRange(1, 5) != 1)
+		{
+			newProjectile = rock.Instantiate() as Projectile;
+		} else
+		{
+			newProjectile = boulder.Instantiate() as Projectile;
+		}
 
-		Rock newRock = rock.Instantiate() as Rock;
 
+		GetParent().GetParent().AddChild(newProjectile);
 
-		GetParent().GetParent().AddChild(newRock);
+		newProjectile.playerID = ID;
 
-		newRock.playerID = ID;
-
-		newRock.GlobalPosition = GlobalPosition;
+		newProjectile.GlobalPosition = GlobalPosition;
 
 		Vector2 dir = (GetNode<Control>("ColorRect").GlobalPosition - GlobalPosition).Normalized();
-		newRock.LinearVelocity = -(dir * rockVelocity * 200);
+		newProjectile.LinearVelocity = -(dir * rockVelocity * 200);
 
 
 		rockVelocity = 0.0f;
@@ -172,7 +179,7 @@ public partial class Player : CharacterBody2D
 		return new Color(r, g, b, a);
 	}
 
-	public void Damage(int damage)
+	public void Damage(float damage)
 	{
 		health-=damage;
 		if(health<=0)

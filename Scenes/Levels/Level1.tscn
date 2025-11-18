@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfgtmf4hwotsg"]
+[gd_scene load_steps=8 format=3 uid="uid://dfgtmf4hwotsg"]
 
-[ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="1_7hdc5"]
-[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="1_euhq5"]
-[ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_qvw8d"]
-[ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Scripts/Camera.cs" id="4_ta566"]
+[ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_xvio3"]
+[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="2_kri6y"]
+[ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="3_4d3fe"]
+[ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Scripts/Camera.cs" id="4_3ipdw"]
+[ext_resource type="PackedScene" uid="uid://coo6klj3plb8e" path="res://Scenes/boulder.tscn" id="4_kri6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
@@ -12,7 +13,7 @@ size = Vector2(583, 73)
 glow_enabled = true
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_qvw8d")
+script = ExtResource("1_xvio3")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(545, 347)
@@ -26,7 +27,7 @@ shape = SubResource("RectangleShape2D_e231j")
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("1_euhq5")
+texture = ExtResource("2_kri6y")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(24.6835, 163)
@@ -36,7 +37,7 @@ shape = SubResource("RectangleShape2D_e231j")
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D2"]
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("1_euhq5")
+texture = ExtResource("2_kri6y")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-301.899, -174)
@@ -46,7 +47,7 @@ shape = SubResource("RectangleShape2D_e231j")
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D7"]
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("1_euhq5")
+texture = ExtResource("2_kri6y")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(12.0253, 414)
@@ -56,7 +57,7 @@ shape = SubResource("RectangleShape2D_e231j")
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D3"]
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("1_euhq5")
+texture = ExtResource("2_kri6y")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(24.0506, -824)
@@ -66,7 +67,7 @@ shape = SubResource("RectangleShape2D_e231j")
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D4"]
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("1_euhq5")
+texture = ExtResource("2_kri6y")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(772.152, -158)
@@ -77,7 +78,7 @@ shape = SubResource("RectangleShape2D_e231j")
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D5"]
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("1_euhq5")
+texture = ExtResource("2_kri6y")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-673.418, -206)
@@ -88,30 +89,31 @@ shape = SubResource("RectangleShape2D_e231j")
 [node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D6"]
 position = Vector2(3.49997, 1.5)
 scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("1_euhq5")
+texture = ExtResource("2_kri6y")
 
-[node name="Player" parent="." instance=ExtResource("1_7hdc5")]
+[node name="Player" parent="." instance=ExtResource("3_4d3fe")]
 position = Vector2(542, 69)
+boulder = ExtResource("4_kri6y")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(548, 179)
-script = ExtResource("4_ta566")
+script = ExtResource("4_3ipdw")
 margin = 200
 minZoom = 1.2
 
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="Markers"]
-position = Vector2(173, 62)
+position = Vector2(13, -51)
 
 [node name="Marker2D2" type="Marker2D" parent="Markers"]
-position = Vector2(896, 72)
+position = Vector2(1178, -44)
 
 [node name="Marker2D3" type="Marker2D" parent="Markers"]
-position = Vector2(721, -77)
+position = Vector2(570, 290)
 
 [node name="Marker2D4" type="Marker2D" parent="Markers"]
-position = Vector2(352, -79)
+position = Vector2(-200, 414)
 
 [node name="Players" type="Node2D" parent="."]
 
@@ -123,10 +125,10 @@ color = Color(0, 0, 0, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -4644.0
-offset_top = -3179.0
-offset_right = 6905.0
-offset_bottom = 6292.0
+offset_left = -7673.0
+offset_top = -3204.0
+offset_right = 3876.0
+offset_bottom = 6267.0
 color = Color(0.133196, 0.133196, 0.133196, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

@@ -5,20 +5,15 @@ public abstract partial class Projectile : RigidBody2D
 {
 	public int playerID = 0;
 	private double spawnedInTime = 0.0;
-	// Called when the node enters the scene tree for the first time.
+	private bool velocityDamage = true;
+	private float damageMultiplier = 1.0f;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	public void countTime(double delta)
 	{
-		spawnedInTime+=delta;
+		spawnedInTime += delta;
 	}
 
-	public void count(double delta)
-	{
-        spawnedInTime += delta;
-    }
-
-	public void BodyEntered(Node2D body)
+	public void PlayerHit(Node2D body)
 	{
 		if(body is Player)
 		{
@@ -26,7 +21,10 @@ public abstract partial class Projectile : RigidBody2D
 			if(player.ID != playerID || spawnedInTime>=0.7f)
 			{
 				GD.Print(Mathf.Round(LinearVelocity.Length() / 50));
-				player.Damage((int)Mathf.Round(LinearVelocity.Length()/50));
+				if(velocityDamage)
+				{
+					player.Damage(Mathf.Round((float)LinearVelocity.Length() / 50.0f) * damageMultiplier);
+				}
 				QueueFree();
 
 			}
