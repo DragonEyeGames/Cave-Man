@@ -13,7 +13,12 @@ public abstract partial class Projectile : RigidBody2D
 		spawnedInTime += delta;
 	}
 
-	public void PlayerHit(Node2D body)
+	public void count(double delta)
+	{
+		spawnedInTime += delta;
+	}
+
+	public void BodyEntered(Node2D body)
 	{
 		if(body is Player)
 		{
