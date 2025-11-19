@@ -15,6 +15,7 @@ public partial class Player : CharacterBody2D
 	private bool dropVelocity = false;
 
 	[Export] public PackedScene rock;
+	[Export] public PackedScene bomb;
 	[Export] public PackedScene boulder;
 
 	public override void _Ready()
@@ -25,6 +26,7 @@ public partial class Player : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
+
 		GetNode<RichTextLabel>("RichTextLabel").Text = "Player " + (ID + 1);
 		Vector2 velocity = Velocity;
 
@@ -113,12 +115,17 @@ public partial class Player : CharacterBody2D
 		arrow.Visible = false;
 
 		Projectile newProjectile = null;
-		if(GD.RandRange(1, 5) != 1)
+		int random = GD.RandRange(1, 5);
+		if(random == 5)
 		{
-			newProjectile = rock.Instantiate() as Projectile;
-		} else
+			newProjectile = bomb.Instantiate() as Projectile;
+		} else if(random == 4)
 		{
 			newProjectile = boulder.Instantiate() as Projectile;
+		} else
+		{
+			newProjectile = rock.Instantiate() as Projectile;
+			GD.Print("Rock");
 		}
 
 

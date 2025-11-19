@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dfgtmf4hwotsg"]
+[gd_scene load_steps=7 format=3 uid="uid://dfgtmf4hwotsg"]
 
 [ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_xvio3"]
 [ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="2_kri6y"]
 [ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="3_4d3fe"]
 [ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Scripts/Camera.cs" id="4_3ipdw"]
-[ext_resource type="PackedScene" uid="uid://coo6klj3plb8e" path="res://Scenes/boulder.tscn" id="4_kri6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
@@ -93,10 +92,10 @@ texture = ExtResource("2_kri6y")
 
 [node name="Player" parent="." instance=ExtResource("3_4d3fe")]
 position = Vector2(542, 69)
-boulder = ExtResource("4_kri6y")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(548, 179)
+position_smoothing_enabled = true
 script = ExtResource("4_3ipdw")
 margin = 200
 minZoom = 1.2
@@ -110,7 +109,7 @@ position = Vector2(13, -51)
 position = Vector2(1178, -44)
 
 [node name="Marker2D3" type="Marker2D" parent="Markers"]
-position = Vector2(570, 290)
+position = Vector2(1364, 417)
 
 [node name="Marker2D4" type="Marker2D" parent="Markers"]
 position = Vector2(-200, 414)
