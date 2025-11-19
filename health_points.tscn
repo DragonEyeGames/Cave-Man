@@ -23,7 +23,7 @@ anchors_preset = 0
 [node name="VFlowContainer" type="VFlowContainer" parent="."]
 layout_mode = 0
 offset_top = 2.0
-offset_right = 68.0
+offset_right = 100.0
 offset_bottom = 96.0
 
 [node name="health" type="ProgressBar" parent="VFlowContainer"]
