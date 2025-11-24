@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccr8itbo2uf8j"]
+[gd_scene load_steps=4 format=3 uid="uid://ccr8itbo2uf8j"]
 
-[ext_resource type="Script" uid="uid://bukpcue4tmwa4" path="res://Scripts/healthBar.cs" id="1_yho6w"]
-[ext_resource type="Script" uid="uid://d062gjyvcofbw" path="res://Score.cs" id="2_cnj67"]
+[ext_resource type="Script" uid="uid://bu0eu18p2akbe" path="res://PlayerUI.cs" id="1_cnj67"]
 [ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="2_ulc3c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yho6w"]
@@ -19,26 +18,26 @@ animations = [{
 z_index = 6
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_cnj67")
 
 [node name="VFlowContainer" type="VFlowContainer" parent="."]
 layout_mode = 0
+offset_left = 3.0
 offset_top = 2.0
-offset_right = 100.0
-offset_bottom = 96.0
+offset_right = 78.0
+offset_bottom = 82.0
 
 [node name="health" type="ProgressBar" parent="VFlowContainer"]
 layout_mode = 2
 value = 100.0
-script = ExtResource("1_yho6w")
 
 [node name="score" type="Label" parent="VFlowContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-text = "1000
+text = "0
 "
-script = ExtResource("2_cnj67")
 
 [node name="lives" type="AnimatedSprite2D" parent="."]
-position = Vector2(10.25, 62.25)
+position = Vector2(24, 67)
 scale = Vector2(0.121094, 0.121094)
 sprite_frames = SubResource("SpriteFrames_yho6w")

@@ -186,9 +186,16 @@ public partial class Player : CharacterBody2D
 		return new Color(r, g, b, a);
 	}
 
+	[Signal]
+	public delegate void HealthUpdateEventHandler(int health);
+
+
 	public void Damage(float damage)
 	{
 		health-=damage;
+		
+		EmitSignal(SignalName.HealthUpdate, health);
+		
 		if(health<=0)
 		{
 			QueueFree();

@@ -1,9 +1,20 @@
 using Godot;
 using System;
 
-public partial class Score : Label
+public partial class PlayerUI : Control
 {
-	// Total points
+	private ProgressBar healthBar;
+	private Label scoreLabel;
+	
+	public override void _Ready() {
+		healthBar = GetNode<ProgressBar>("VFlowContainer/health");
+		scoreLabel = GetNode<Label>("VFlowContainer/score");
+	}
+	
+	
+	private int _maxHealth = 100;
+	// Current health starts full
+	private int _currentHealth = 100;
 	public int score { get; private set; } = 0;
 
 	// Combo system
@@ -13,10 +24,10 @@ public partial class Score : Label
 
 	// Kill streak system
 	private int killStreak = 0;
-
+	
 	public override void _Process(double delta)
 	{
-		this.Text = (int.Parse(this.Text) + 1).ToString();
+		scoreLabel.Text = (int.Parse(scoreLabel.Text) + 1).ToString();
 		// Combo timer countdown
 		if (comboCount > 0)
 		{
@@ -74,7 +85,7 @@ public partial class Score : Label
 		}
 		else if (score > 500)
 		{
-			this.Text = "";
+			scoreLabel.Text = "";
 			GD.Print("Difficulty level: HIGH");
 		}
 		else if (score > 200)
@@ -82,4 +93,33 @@ public partial class Score : Label
 			GD.Print("Difficulty level: MEDIUM");
 		}
 	}
+	
+	public void UpdateHealth(int health) {
+		return;
+	}
+	
+	// Call this when taking damage
+	public void TakeDamage(int damage)
+	{
+		_currentHealth -= damage;
+		if (_currentHealth < 0)
+			_currentHealth = 0;
+		UpdateHealthBar();
+	}
+
+	// Call this when healing
+	public void Heal(int amount)
+	{
+		_currentHealth += amount;
+		if (_currentHealth > _maxHealth)
+			_currentHealth = _maxHealth;
+		UpdateHealthBar();
+	}
+
+	// Update the UI
+	private void UpdateHealthBar()
+	{
+		healthBar.Value = (float)_currentHealth / _maxHealth * 100f;
+	}
+	
 }
