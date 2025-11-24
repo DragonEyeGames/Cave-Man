@@ -7,12 +7,28 @@
       "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\scripts\\fish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:scripts\\fish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\scripts\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:scripts\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\scripts\\controllerconnecting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|solutionrelative:scripts\\controllerconnecting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E7D2622-F703-462D-8BE7-3A7C34CE6DC3}|Echofall.csproj|c:\\users\\bthole\\documents\\github\\cave-man\\scripts\\boulder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,46 +46,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Scripts\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T17:21:04.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Fish.cs",
+              "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Fish.cs",
+              "RelativeDocumentMoniker": "Scripts\\Fish.cs",
+              "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Fish.cs",
+              "RelativeToolTip": "Scripts\\Fish.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T17:06:03.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Main.cs",
+              "RelativeDocumentMoniker": "Scripts\\Main.cs",
+              "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Main.cs",
+              "RelativeToolTip": "Scripts\\Main.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T16:58:15.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ControllerConnecting.cs",
+              "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\ControllerConnecting.cs",
+              "RelativeDocumentMoniker": "Scripts\\ControllerConnecting.cs",
+              "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\ControllerConnecting.cs",
+              "RelativeToolTip": "Scripts\\ControllerConnecting.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wB0AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-19T16:57:55.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Bomb.cs",
               "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Bomb.cs",
               "RelativeDocumentMoniker": "Scripts\\Bomb.cs",
               "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Bomb.cs",
               "RelativeToolTip": "Scripts\\Bomb.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T16:40:44.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Projectile.cs",
               "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Projectile.cs",
               "RelativeDocumentMoniker": "Scripts\\Projectile.cs",
               "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Projectile.cs",
               "RelativeToolTip": "Scripts\\Projectile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAqwFoAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-13T16:48:10.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Boulder.cs",
               "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Boulder.cs",
               "RelativeDocumentMoniker": "Scripts\\Boulder.cs",
               "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Boulder.cs",
               "RelativeToolTip": "Scripts\\Boulder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T17:16:51.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T17:16:51.432Z"
             },
             {
               "$type": "Document",
@@ -79,14 +144,14 @@
               "RelativeDocumentMoniker": "Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Player.cs",
               "RelativeToolTip": "Scripts\\Player.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBsAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAA9wI8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-13T17:01:32.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Rock.cs",
               "DocumentMoniker": "C:\\Users\\bthole\\Documents\\GitHub\\Cave-Man\\Scripts\\Rock.cs",
               "RelativeDocumentMoniker": "Scripts\\Rock.cs",
@@ -94,8 +159,7 @@
               "RelativeToolTip": "Scripts\\Rock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T16:48:08.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T16:48:08.537Z"
             }
           ]
         }

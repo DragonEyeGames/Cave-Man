@@ -7,14 +7,18 @@ public partial class Camera : Camera2D
 	int margin = 5;
 	[Export]
 	float minZoom = 5.0f;
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
 	{
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if (GetNode<Node2D>("../Players").GetChildren().Count<=0)
+		{
+			return;
+		}
 		Node first = GetNode<Node2D>("../Players").GetChild(0);
 		Node2D firstNode = first as Node2D;
 
