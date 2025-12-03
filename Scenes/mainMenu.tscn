@@ -1,0 +1,129 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwinvpfx67kpl"]
+
+[ext_resource type="Script" uid="uid://6of6icy445eh" path="res://Scripts/mainMenu.cs" id="1_yl13b"]
+[ext_resource type="FontFile" uid="uid://clnh8wfyr5150" path="res://Fonts/Title.otf" id="2_3uny1"]
+[ext_resource type="Texture2D" uid="uid://c4171w1cqd61g" path="res://Art/fire.png" id="3_v10og"]
+[ext_resource type="FontFile" uid="uid://clmmkx0ylh45l" path="res://Fonts/Text.otf" id="4_kqm77"]
+
+[sub_resource type="Curve" id="Curve_83s16"]
+_limits = [0.0, 0.1, 0.0, 1.0]
+_data = [Vector2(0.0113636, 0.00449438), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_w7d22"]
+offsets = PackedFloat32Array(0, 0.56, 1)
+colors = PackedColorArray(0.702, 0.17, 0, 0, 0.708, 0.075, 0.011, 0.513, 0.712, 0, 0.02, 0)
+
+[sub_resource type="Curve" id="Curve_w7d22"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0.00568181, -0.101124), 0.0, 0.0, 0, 0, Vector2(0.5625, 0.011236), 0.0, 0.0, 0, 0, Vector2(1, 0.123595), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yl13b")
+
+[node name="Echofall" type="RichTextLabel" parent="."]
+z_index = 4
+layout_mode = 0
+offset_right = 1917.0
+offset_bottom = 388.0
+theme_override_fonts/normal_font = ExtResource("2_3uny1")
+theme_override_font_sizes/normal_font_size = 250
+text = "Echofall"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0646966, 0.0646965, 0.0646965, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(1, 1, 1, 0.1)
+z_index = 3
+position = Vector2(951, 1175)
+amount = 5000
+texture = ExtResource("3_v10og")
+lifetime = 3.0
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 500.0
+angle_min = -720.0
+angle_max = 720.0
+scale_amount_min = 100.0
+scale_amount_max = 100.0
+scale_amount_curve = SubResource("Curve_83s16")
+color_ramp = SubResource("Gradient_w7d22")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("Curve_w7d22")
+
+[node name="Play" type="Button" parent="."]
+z_index = 3
+layout_mode = 0
+offset_left = 651.0
+offset_top = 453.0
+offset_right = 1264.0
+offset_bottom = 643.0
+theme_override_fonts/font = ExtResource("4_kqm77")
+theme_override_font_sizes/font_size = 181
+icon_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Play"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_kqm77")
+theme_override_font_sizes/normal_font_size = 134
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+z_index = 3
+layout_mode = 0
+offset_left = 645.0
+offset_top = 717.0
+offset_right = 1258.0
+offset_bottom = 907.0
+theme_override_fonts/font = ExtResource("4_kqm77")
+theme_override_font_sizes/font_size = 181
+icon_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Button2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_kqm77")
+theme_override_font_sizes/normal_font_size = 134
+text = "Quit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Play" to="." method="Play"]
+[connection signal="pressed" from="Button2" to="." method="Stop"]

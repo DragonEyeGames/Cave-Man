@@ -15,6 +15,10 @@ public partial class Camera : Camera2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if (GetNode<Node2D>("../Players").GetChildren().Count<=0)
+		{
+			return;
+		}
 		Node first = GetNode<Node2D>("../Players").GetChild(0);
 		Node2D firstNode = first as Node2D;
 

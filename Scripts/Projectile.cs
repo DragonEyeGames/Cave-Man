@@ -69,6 +69,31 @@ public abstract partial class Projectile : RigidBody2D
 			GetNode<AnimatedSprite2D>("Explosion").Play("explode");
 			GetNode<Node2D>("Sprite").Visible = false;
 			SetDeferred("freeze", true);
+			Vector2 newExplosion = (player.GlobalPosition - GlobalPosition) / 50;
+			if(Mathf.Abs(newExplosion.X) > 1)
+			{
+				if (newExplosion.X < 0)
+				{
+					newExplosion.X = -1;
+				} else
+				{
+					newExplosion.X = 1;
+				}
+			}
+			if (Mathf.Abs(newExplosion.Y) > 1)
+			{
+				if (newExplosion.Y < 0)
+				{
+					newExplosion.Y = -1;
+				}
+				else
+				{
+					newExplosion.Y = 1;
+				}
+			}
+			newExplosion /= 4;
+			player.explodeVelocity = newExplosion*2;
+			GetNode<AnimationPlayer>("AnimationPlayer").Play("explode");
 			await ToSignal(GetTree().CreateTimer(1), "timeout");
 			GD.Print("BYE");
 			QueueFree();

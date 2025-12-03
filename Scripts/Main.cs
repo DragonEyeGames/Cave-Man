@@ -25,7 +25,8 @@ public partial class Main : Node2D
 	{
 		if(Input.IsActionJustPressed("Menu"))
 		{
-			GetTree().ChangeSceneToFile("res://Scenes/Levels/Level1.tscn");
+			int level = GD.RandRange(1, 2);
+			GetTree().ChangeSceneToFile("res://Scenes/Levels/Level" + level + ".tscn");
 		}
 	}
 }

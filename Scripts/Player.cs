@@ -14,9 +14,12 @@ public partial class Player : CharacterBody2D
 	private double jumpTime = 0.0;
 	private bool dropVelocity = false;
 
+	[Export] public Vector2 explodeVelocity = Vector2.Zero;
+
 	[Export] public PackedScene rock;
 	[Export] public PackedScene bomb;
 	[Export] public PackedScene boulder;
+	[Export] public PackedScene fish;
 
 	public override void _Ready()
 	{
@@ -68,12 +71,25 @@ public partial class Player : CharacterBody2D
 		{
 			velocity.X = direction.X * Speed;
 		}
-		else
+		else if (explodeVelocity==Vector2.Zero)
 		{
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 		}
 
 		Velocity = velocity;
+		if(explodeVelocity!=Vector2.Zero)
+		{
+			Velocity += explodeVelocity*Speed;
+			explodeVelocity *= .9f;
+			if (explodeVelocity.X < 0.1)
+			{
+				explodeVelocity.X = 0;
+			}
+			if (explodeVelocity.Y < 0.1)
+			{
+				explodeVelocity.Y = 0;
+			}
+		}
 		MoveAndSlide();
 
 		if (throwing)
@@ -122,10 +138,12 @@ public partial class Player : CharacterBody2D
 		} else if(random == 4)
 		{
 			newProjectile = boulder.Instantiate() as Projectile;
+		} else if(random == 3)
+		{
+			newProjectile = fish.Instantiate() as Projectile;
 		} else
 		{
 			newProjectile = rock.Instantiate() as Projectile;
-			GD.Print("Rock");
 		}
 
 
