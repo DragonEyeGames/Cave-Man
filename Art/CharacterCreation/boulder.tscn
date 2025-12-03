@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://coo6klj3plb8e"]
 
-[ext_resource type="Script" uid="uid://0pq41c7p66l" path="res://Scripts/Boulder.cs" id="1_4dqbg"]
-[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="2_umxe1"]
+[ext_resource type="Script" uid="uid://0pq41c7p66l" path="res://Scripts/Boulder.cs" id="1_kho8v"]
+[ext_resource type="Texture2D" uid="uid://b17bd1khc5f41" path="res://Scripts/boulder.png" id="2_6oq5b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
 radius = 18.1108
@@ -23,12 +23,12 @@ fill_to = Vector2(0.169725, 0.192661)
 collision_layer = 2
 collision_mask = 3
 angular_velocity = 1.74533
-script = ExtResource("1_4dqbg")
+script = ExtResource("1_kho8v")
 
 [node name="Icon2" type="Sprite2D" parent="."]
-self_modulate = Color(0.660212, 0, 0.144479, 1)
-scale = Vector2(1.04, 1.04)
-texture = ExtResource("2_umxe1")
+position = Vector2(4, -6)
+scale = Vector2(0.295, 0.295)
+texture = ExtResource("2_6oq5b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(3.475, 3.475)
