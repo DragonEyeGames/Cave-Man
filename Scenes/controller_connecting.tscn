@@ -1,0 +1,149 @@
+[gd_scene load_steps=3 format=3 uid="uid://ituq2j3chkd"]
+
+[ext_resource type="Script" uid="uid://j7irs1w1v5v2" path="res://Scripts/ControllerConnecting.cs" id="1_f5l4c"]
+[ext_resource type="Texture2D" uid="uid://bk6ojexahyenb" path="res://Art/xBoxController.png" id="2_tjfwa"]
+
+[node name="Controller Connecting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f5l4c")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 384.0
+theme_override_font_sizes/normal_font_size = 38
+text = "Plug in a controller and when all are in press 'a' to start the game!"
+horizontal_alignment = 1
+
+[node name="Container" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 320.0
+offset_right = 1115.0
+offset_bottom = 624.0
+alignment = 1
+
+[node name="0" type="Control" parent="Container"]
+custom_minimum_size = Vector2(250, 170)
+layout_mode = 2
+
+[node name="XBoxController" type="Sprite2D" parent="Container/0"]
+z_index = 1
+position = Vector2(129, 88)
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("2_tjfwa")
+
+[node name="ColorRect" type="ColorRect" parent="Container/0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container/0"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 162.0
+offset_right = 242.0
+offset_bottom = 255.0
+theme_override_font_sizes/normal_font_size = 52
+text = "Player 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="1" type="Control" parent="Container"]
+custom_minimum_size = Vector2(250, 170)
+layout_mode = 2
+
+[node name="XBoxController" type="Sprite2D" parent="Container/1"]
+z_index = 1
+position = Vector2(129, 88)
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("2_tjfwa")
+
+[node name="ColorRect" type="ColorRect" parent="Container/1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container/1"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 162.0
+offset_right = 242.0
+offset_bottom = 255.0
+theme_override_font_sizes/normal_font_size = 52
+text = "Player 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2" type="Control" parent="Container"]
+custom_minimum_size = Vector2(250, 170)
+layout_mode = 2
+
+[node name="XBoxController" type="Sprite2D" parent="Container/2"]
+z_index = 1
+position = Vector2(129, 88)
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("2_tjfwa")
+
+[node name="ColorRect" type="ColorRect" parent="Container/2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container/2"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 162.0
+offset_right = 242.0
+offset_bottom = 255.0
+theme_override_font_sizes/normal_font_size = 52
+text = "Player 3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3" type="Control" parent="Container"]
+custom_minimum_size = Vector2(250, 170)
+layout_mode = 2
+
+[node name="XBoxController" type="Sprite2D" parent="Container/3"]
+z_index = 1
+position = Vector2(129, 88)
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("2_tjfwa")
+
+[node name="ColorRect" type="ColorRect" parent="Container/3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Container/3"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 162.0
+offset_right = 242.0
+offset_bottom = 255.0
+theme_override_font_sizes/normal_font_size = 52
+text = "Player 4"
+horizontal_alignment = 1
+vertical_alignment = 1
