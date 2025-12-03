@@ -120,6 +120,7 @@ position = Vector2(588, 634)
 [node name="Players" type="Node2D" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.0177324, 0.0177324, 0.0177324, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
