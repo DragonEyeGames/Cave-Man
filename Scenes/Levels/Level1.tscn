@@ -104,3 +104,10 @@ environment = SubResource("Environment_ta566")
 
 [node name="Rocks" parent="." instance=ExtResource("4_xvio3")]
 modulate = Color(2, 2, 2, 1)
+
+[node name="Polygon2D" type="Polygon2D" parent="Rocks"]
+z_index = 5
+position = Vector2(-0.715393, 0)
+scale = Vector2(0.998718, 1)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-491, -466, 1759, -449, 1782, -577, -558, -601)

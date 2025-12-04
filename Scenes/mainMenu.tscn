@@ -39,6 +39,14 @@ text = "Echofall"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ColorRect" type="ColorRect" parent="Echofall"]
+layout_mode = 0
+offset_left = 730.0
+offset_top = 102.0
+offset_right = 736.0
+offset_bottom = 107.0
+color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 1
 layout_mode = 1

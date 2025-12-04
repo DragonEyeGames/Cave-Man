@@ -32,10 +32,10 @@ public partial class Fire : CpuParticles2D
 
 	public async void fireEvents()
 	{
-		await ToSignal(GetTree().CreateTimer(GD.RandRange(1, 2)), "timeout");
+		await ToSignal(GetTree().CreateTimer(GD.RandRange(10, 15)), "timeout");
 		Emitting = true;
 		collider.Disabled = false;
-		await ToSignal(GetTree().CreateTimer(GD.RandRange(1, 2)), "timeout");
+		await ToSignal(GetTree().CreateTimer(GD.RandRange(10, 15)), "timeout");
 		Emitting = false;
 		collider.Disabled = true;
 		fireEvents();
