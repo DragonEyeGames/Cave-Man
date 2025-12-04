@@ -288,8 +288,8 @@ tracks/10/keys = {
 
 [sub_resource type="Animation" id="Animation_ukyrk"]
 resource_name = "walk"
-length = 0.5
-loop_mode = 2
+length = 2.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -297,10 +297,10 @@ tracks/0/path = NodePath("Arm:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = false
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(18.8458, 10.4307), Vector2(25, 68)]
+"values": [Vector2(18.8458, 10.4307), Vector2(25, 68), Vector2(18.8458, 10.4307), Vector2(25, 68), Vector2(18.8458, 10.4307)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -309,10 +309,10 @@ tracks/1/path = NodePath("Arm:rotation")
 tracks/1/interp = 2
 tracks/1/loop_wrap = false
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.816814]
+"values": [0.0, 0.816814, 0.0, -0.816814, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -321,10 +321,10 @@ tracks/2/path = NodePath("Body:position")
 tracks/2/interp = 2
 tracks/2/loop_wrap = false
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(1, -25)]
+"values": [Vector2(0, 0), Vector2(1, -25), Vector2(0, 0), Vector2(1, -25), Vector2(0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -357,10 +357,10 @@ tracks/5/path = NodePath("Leg:rotation")
 tracks/5/interp = 2
 tracks/5/loop_wrap = false
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, -0.652753]
+"values": [0.0, -0.652753, 0.0, 0.652753, 0.0]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -369,10 +369,10 @@ tracks/6/path = NodePath("Arm2:position")
 tracks/6/interp = 2
 tracks/6/loop_wrap = false
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(18.8458, 10.4307), Vector2(21, 65)]
+"values": [Vector2(18.8458, 10.4307), Vector2(21, 65), Vector2(18.8458, 10.4307), Vector2(21, 65), Vector2(18.8458, 10.4307)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -381,10 +381,10 @@ tracks/7/path = NodePath("Arm2:rotation")
 tracks/7/interp = 2
 tracks/7/loop_wrap = false
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, -0.816814]
+"values": [0.0, -0.816814, 0.0, 0.816814, 0.0]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -405,10 +405,10 @@ tracks/9/path = NodePath("Leg2:rotation")
 tracks/9/interp = 2
 tracks/9/loop_wrap = false
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.619592]
+"values": [0.0, 0.619592, 0.0, -0.619592, 0.0]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
@@ -417,10 +417,10 @@ tracks/10/path = NodePath("Head:position")
 tracks/10/interp = 2
 tracks/10/loop_wrap = false
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(18, 39)]
+"values": [Vector2(0, 0), Vector2(18, 39), Vector2(0, 0), Vector2(18, 39), Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wpjfl"]
@@ -515,6 +515,12 @@ position = Vector2(18.8458, 10.4307)
 texture = ExtResource("6_ukyrk")
 offset = Vector2(-19.4312, -9.29469)
 
+[node name="DummyArm" type="Sprite2D" parent="Icon"]
+position = Vector2(24.8268, 66.3796)
+rotation = -0.793824
+texture = ExtResource("6_ukyrk")
+offset = Vector2(-19.4312, -9.29469)
+
 [node name="Arm2" type="Sprite2D" parent="Icon"]
 position = Vector2(18.8458, 10.4307)
 texture = ExtResource("6_ukyrk")
@@ -557,7 +563,6 @@ position = Vector2(-4, 11)
 shape = SubResource("CapsuleShape2D_4flbx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 

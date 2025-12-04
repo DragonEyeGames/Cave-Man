@@ -130,6 +130,11 @@ public partial class Player : CharacterBody2D
 				GetNode<ColorRect>("ColorRect").Position = new Vector2(-GetNode<ColorRect>("ColorRect").Position.X, -GetNode<ColorRect>("ColorRect").Position.Y);
 
 			}
+			GetNode<Sprite2D>("Icon/Arm").Visible=false;
+			GetNode<Sprite2D>("Icon/DummyArm").Visible=true;
+			GetNode<Sprite2D>("Icon/DummyArm").LookAt(GetNode<ColorRect>("ColorRect").Position);
+			GetNode<Sprite2D>("Icon/DummyArm").RotationDegrees+=90;
+			GD.Print(GetNode<Sprite2D>("Icon/DummyArm").RotationDegrees);
 			GetNode<Node2D>("Arrow").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
 			rockVelocity += (float)delta * 6;
 
@@ -138,6 +143,9 @@ public partial class Player : CharacterBody2D
 				rockVelocity = 10;
 			}
 
+		} else {
+			GetNode<Sprite2D>("Icon/Arm").Visible=true;
+			GetNode<Sprite2D>("Icon/DummyArm").Visible=false;
 		}
 		shakePlayer();
 	}
