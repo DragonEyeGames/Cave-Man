@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://ckyn56ckgwv3a"
+path="res://.godot/imported/Angry.png-4acd72ad8fbfc3951dad89188f2c8a1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Face/Angry.png"
+dest_files=["res://.godot/imported/Angry.png-4acd72ad8fbfc3951dad89188f2c8a1e.ctex"]
 
 [params]
 

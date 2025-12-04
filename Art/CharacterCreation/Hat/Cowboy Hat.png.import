@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://bqupre7bsqh8h"
+path="res://.godot/imported/Cowboy Hat.png-338606468fcddc29115e5a757662839a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Hat/Cowboy Hat.png"
+dest_files=["res://.godot/imported/Cowboy Hat.png-338606468fcddc29115e5a757662839a.ctex"]
 
 [params]
 

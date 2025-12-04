@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://qe3frda1d4b0"
+path="res://.godot/imported/Sunglasses.png-b111958331c25ed9679f148258eef569.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Accessory/Sunglasses.png"
+dest_files=["res://.godot/imported/Sunglasses.png-b111958331c25ed9679f148258eef569.ctex"]
 
 [params]
 

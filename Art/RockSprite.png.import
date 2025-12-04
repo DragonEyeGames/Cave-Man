@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://dnrrtfamfijm8"
+path="res://.godot/imported/RockSprite.png-a802ab6a001d81a4e7df62202add09a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/RockSprite.png"
+dest_files=["res://.godot/imported/RockSprite.png-a802ab6a001d81a4e7df62202add09a8.ctex"]
 
 [params]
 

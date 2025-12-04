@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://da6wpqqv0qe0e"
+path="res://.godot/imported/Chonk.png-e1d69a9d8d7b3b814a7b2979475afdd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Face/Chonk.png"
+dest_files=["res://.godot/imported/Chonk.png-e1d69a9d8d7b3b814a7b2979475afdd5.ctex"]
 
 [params]
 

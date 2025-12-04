@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://ccqbjli7aeeps"
+path="res://.godot/imported/Wizard.png-0b1111bd6bab0d84ed65e12ebb76ada2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Hat/Wizard.png"
+dest_files=["res://.godot/imported/Wizard.png-0b1111bd6bab0d84ed65e12ebb76ada2.ctex"]
 
 [params]
 

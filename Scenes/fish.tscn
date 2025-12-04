@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://l8uvxcyoimr2"]
 
 [ext_resource type="Script" uid="uid://c6ei8wl6wo5gg" path="res://Scripts/Fish.cs" id="1_4fqy1"]
-[ext_resource type="Texture2D" uid="uid://cc2apbkl87a4c" path="res://Art/CharacterCreation/Fish.png" id="2_4fqy1"]
+[ext_resource type="Texture2D" uid="uid://cc2apbkl87a4c" path="res://Art/Fish.png" id="2_4fqy1"]
 [ext_resource type="AudioStream" uid="uid://dorskcca76yap" path="res://Music/I am just a fish (full cover).mp3" id="3_4fqy1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4fqy1"]

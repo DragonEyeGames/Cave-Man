@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://c4rwkdnwqruqf"
+path="res://.godot/imported/Chin.png-f04303c6c62af01211b8a0169a08461e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Accessory/Chin.png"
+dest_files=["res://.godot/imported/Chin.png-f04303c6c62af01211b8a0169a08461e.ctex"]
 
 [params]
 

@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using System;
 
 public partial class Player : CharacterBody2D
@@ -24,6 +25,9 @@ public partial class Player : CharacterBody2D
 
 	public override void _Ready()
 	{
+		GetNode<Sprite2D>("Icon/Head/Hat").Texture=GD.Load<Texture2D>(GetRandomFile("res://Art/CharacterCreation/Hat/"));
+		GetNode<Sprite2D>("Icon/Head/Face").Texture=GD.Load<Texture2D>(GetRandomFile("res://Art/CharacterCreation/Face/"));
+		GetNode<Sprite2D>("Icon/Head/Accessory").Texture=GD.Load<Texture2D>(GetRandomFile("res://Art/CharacterCreation/Accessory/"));
 		animator=GetNode<AnimationPlayer>("Icon/Controller");
 		//Modulate = GetRandomColor();
 		GetNode<RichTextLabel>("RichTextLabel").Text = "Player " + ID+1;
@@ -237,4 +241,37 @@ public partial class Player : CharacterBody2D
 		}
 
 	}
+	
+	private string GetRandomFile(string folderPath)
+{
+	DirAccess dir = DirAccess.Open(folderPath);
+	if (dir == null)
+	{
+		GD.PushError($"Could not open: {folderPath}");
+		return null;
+	}
+
+	dir.ListDirBegin();
+	Array<string> files = new Array<string>();
+
+	string fileName = dir.GetNext();
+	while (fileName != "")
+	{
+		if (!dir.CurrentIsDir() && fileName.EndsWith(".png")) // skip folders
+			files.Add(folderPath + fileName);
+
+		fileName = dir.GetNext();
+	}
+
+	dir.ListDirEnd();
+
+	if (files.Count == 0)
+		return null;
+
+	// Pick random
+	Random rand = new Random();
+	int index = rand.Next(files.Count);
+
+	return files[index];
+}
 }

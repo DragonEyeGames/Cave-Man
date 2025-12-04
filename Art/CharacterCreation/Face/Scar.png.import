@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://rtkytblhodr4"
+path="res://.godot/imported/Scar.png-31938f50b529fd5c3218570e100788ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Face/Scar.png"
+dest_files=["res://.godot/imported/Scar.png-31938f50b529fd5c3218570e100788ca.ctex"]
 
 [params]
 

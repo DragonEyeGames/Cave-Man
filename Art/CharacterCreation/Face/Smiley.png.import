@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://iqvei070gh17"
+path="res://.godot/imported/Smiley.png-cf1d795a57f4a8a32a4fa2703d35125e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Face/Smiley.png"
+dest_files=["res://.godot/imported/Smiley.png-cf1d795a57f4a8a32a4fa2703d35125e.ctex"]
 
 [params]
 

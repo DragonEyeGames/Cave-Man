@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://cb1n8ntypcsi2"
+path="res://.godot/imported/Sigma.png-9a8233506bd9c7e91a945863a6c72e1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Face/Sigma.png"
+dest_files=["res://.godot/imported/Sigma.png-9a8233506bd9c7e91a945863a6c72e1c.ctex"]
 
 [params]
 

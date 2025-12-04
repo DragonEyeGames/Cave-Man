@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://r1magqyhxctj"
+path="res://.godot/imported/HappyEvil.png-c9e9ffd7f3871d0859127c8b92a399a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Face/HappyEvil.png"
+dest_files=["res://.godot/imported/HappyEvil.png-c9e9ffd7f3871d0859127c8b92a399a1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc2apbkl87a4c"
-path="res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"
+uid="uid://c3pab24rqu1vf"
+path="res://.godot/imported/SantaHat.png-ba867ea6eefd46764bc7618a66f15f65.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fish.png"
-dest_files=["res://.godot/imported/Fish.png-e228bf91178710338eb6167f81e7e247.ctex"]
+source_file="res://Art/CharacterCreation/Hat/SantaHat.png"
+dest_files=["res://.godot/imported/SantaHat.png-ba867ea6eefd46764bc7618a66f15f65.ctex"]
 
 [params]
 
