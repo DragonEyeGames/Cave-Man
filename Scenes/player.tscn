@@ -563,6 +563,7 @@ position = Vector2(-4, 11)
 shape = SubResource("CapsuleShape2D_4flbx")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 
@@ -591,15 +592,9 @@ offset_bottom = -107.0
 value = 100.0
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1, -4)
+position = Vector2(1, -34)
+scale = Vector2(1, 1.33836)
 energy = 0.5
-texture = SubResource("GradientTexture2D_sweqy")
-texture_scale = 4.81
-
-[node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(-1.50002, -120.96)
-scale = Vector2(0.841346, 0.214137)
-energy = 0.3
 texture = SubResource("GradientTexture2D_sweqy")
 texture_scale = 4.81
 

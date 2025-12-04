@@ -67,7 +67,7 @@ limit_bottom = 755
 position_smoothing_enabled = true
 script = ExtResource("4_3ipdw")
 margin = 200
-minZoom = 1.2
+minZoom = 0.9
 
 [node name="Markers" type="Node2D" parent="."]
 
