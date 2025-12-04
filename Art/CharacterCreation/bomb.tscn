@@ -77,16 +77,6 @@ radius = 18.1108
 [sub_resource type="CircleShape2D" id="CircleShape2D_68h2w"]
 radius = 21.0
 
-[sub_resource type="Gradient" id="Gradient_hqtel"]
-offsets = PackedFloat32Array(0.285714, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_68h2w"]
-gradient = SubResource("Gradient_hqtel")
-fill = 1
-fill_from = Vector2(0.513761, 0.495413)
-fill_to = Vector2(0.169725, 0.192661)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_kdyat"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xdnxx"]
@@ -277,6 +267,16 @@ animations = [{
 "speed": 60.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_hqtel"]
+offsets = PackedFloat32Array(0.285714, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_68h2w"]
+gradient = SubResource("Gradient_hqtel")
+fill = 1
+fill_from = Vector2(0.513761, 0.495413)
+fill_to = Vector2(0.169725, 0.192661)
+
 [sub_resource type="Animation" id="Animation_vw0xf"]
 length = 0.001
 tracks/0/type = "value"
@@ -326,18 +326,6 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("PointLight2D:enabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_pi1th"]
@@ -390,18 +378,6 @@ tracks/3/keys = {
 "update": 0,
 "values": [0.0, 50.0, 0.0]
 }
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("PointLight2D:enabled")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sfpcs"]
 _data = {
@@ -410,6 +386,7 @@ _data = {
 }
 
 [node name="Bomb" type="RigidBody2D" node_paths=PackedStringArray("bombShape")]
+modulate = Color(2, 2, 2, 1)
 collision_layer = 2
 collision_mask = 3
 angular_velocity = 1.74533
@@ -422,6 +399,7 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_uutdg")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Sprite"]
+modulate = Color(3, 3, 3, 1)
 position = Vector2(63.3333, -170)
 rotation = 0.760964
 scale = Vector2(1.81818, 1.81818)
@@ -447,12 +425,6 @@ collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_68h2w")
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-scale = Vector2(3.475, 3.475)
-energy = 0.25
-texture = SubResource("GradientTexture2D_68h2w")
-texture_scale = 1.26
 
 [node name="Bomb" type="Area2D" parent="."]
 visible = false

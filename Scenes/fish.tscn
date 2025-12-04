@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://l8uvxcyoimr2"]
+[gd_scene load_steps=9 format=3 uid="uid://l8uvxcyoimr2"]
 
 [ext_resource type="Script" uid="uid://c6ei8wl6wo5gg" path="res://Scripts/Fish.cs" id="1_4fqy1"]
 [ext_resource type="Texture2D" uid="uid://cc2apbkl87a4c" path="res://Art/CharacterCreation/Fish.png" id="2_4fqy1"]
@@ -10,16 +10,6 @@ height = 32.8058
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_68h2w"]
 radius = 21.0
-
-[sub_resource type="Gradient" id="Gradient_hqtel"]
-offsets = PackedFloat32Array(0.285714, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_68h2w"]
-gradient = SubResource("Gradient_hqtel")
-fill = 1
-fill_from = Vector2(0.513761, 0.495413)
-fill_to = Vector2(0.169725, 0.192661)
 
 [sub_resource type="Animation" id="Animation_urn1o"]
 length = 0.001
@@ -59,6 +49,7 @@ _data = {
 }
 
 [node name="Fish" type="RigidBody2D"]
+modulate = Color(2, 2, 2, 1)
 collision_layer = 2
 collision_mask = 3
 angular_velocity = 1.74533
@@ -83,12 +74,6 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0.28777, -2.30216)
 shape = SubResource("CircleShape2D_68h2w")
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-scale = Vector2(3.475, 3.475)
-energy = 0.25
-texture = SubResource("GradientTexture2D_68h2w")
-texture_scale = 1.26
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2(-206, 84)
