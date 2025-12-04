@@ -5,7 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://dorskcca76yap" path="res://Music/I am just a fish (full cover).mp3" id="3_4fqy1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4fqy1"]
-radius = 2.8777
+radius = 9.4964
+height = 32.8058
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_68h2w"]
 radius = 21.0
@@ -65,8 +66,8 @@ script = ExtResource("1_4fqy1")
 metadata/_edit_vertical_guides_ = [-46.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, -11)
-rotation = 2.8414
+position = Vector2(2, -5)
+rotation = 1.5708
 scale = Vector2(3.475, 3.475)
 shape = SubResource("CapsuleShape2D_4fqy1")
 
@@ -80,6 +81,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.28777, -2.30216)
 shape = SubResource("CircleShape2D_68h2w")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -109,7 +111,6 @@ rest = Transform2D(1, 0, 0, 1, 750, 500)
 [node name="Bone2D2" type="Bone2D" parent="Skeleton2D/Bone2D"]
 position = Vector2(516.667, 50)
 rotation = -0.28395
-scale = Vector2(1, 1)
 rest = Transform2D(0.948324, -0.317305, 0.317305, 0.948324, 516.667, 50)
 auto_calculate_length_and_angle = false
 length = 615.054

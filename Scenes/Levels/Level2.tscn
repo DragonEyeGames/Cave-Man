@@ -179,7 +179,7 @@ texture = ExtResource("2_5iseo")
 polygon = PackedVector2Array(-388.608, 396, -49.3671, 185, 107.595, 186, 452.532, 400, 321.519, 506, -333.544, 515)
 
 [node name="Player" parent="." instance=ExtResource("3_4rk67")]
-position = Vector2(542, 69)
+position = Vector2(156, 91)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(548, 179)
@@ -191,23 +191,21 @@ minZoom = 1.2
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="Markers"]
-position = Vector2(13, -51)
+position = Vector2(-232, -239)
 
 [node name="Marker2D2" type="Marker2D" parent="Markers"]
-position = Vector2(1178, -44)
+position = Vector2(1473, -223)
 
 [node name="Marker2D3" type="Marker2D" parent="Markers"]
-position = Vector2(1364, 417)
+position = Vector2(1455, 552)
 
 [node name="Marker2D4" type="Marker2D" parent="Markers"]
-position = Vector2(-200, 414)
-
-[node name="Marker2D5" type="Marker2D" parent="Markers"]
-position = Vector2(588, 634)
+position = Vector2(-241, 514)
 
 [node name="Players" type="Node2D" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.0177324, 0.0177324, 0.0177324, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -261,3 +259,4 @@ disabled = true
 energy = 0.0
 
 [connection signal="body_entered" from="Fire/Area2D" to="Fire" method="PlayerHit"]
+[connection signal="body_exited" from="Fire/Area2D" to="Fire" method="PlayerLeft"]

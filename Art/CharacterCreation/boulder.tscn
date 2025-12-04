@@ -20,6 +20,7 @@ fill_from = Vector2(0.513761, 0.495413)
 fill_to = Vector2(0.169725, 0.192661)
 
 [node name="Rock" type="RigidBody2D"]
+modulate = Color(2, 2, 2, 1)
 collision_layer = 2
 collision_mask = 3
 angular_velocity = 1.74533
@@ -31,10 +32,12 @@ scale = Vector2(0.295, 0.295)
 texture = ExtResource("2_6oq5b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 scale = Vector2(3.475, 3.475)
 shape = SubResource("CircleShape2D_4flbx")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 scale = Vector2(3.475, 3.475)
 collision_layer = 0
 collision_mask = 4
@@ -43,6 +46,7 @@ collision_mask = 4
 shape = SubResource("CircleShape2D_68h2w")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
 scale = Vector2(3.475, 3.475)
 energy = 0.25
 texture = SubResource("GradientTexture2D_68h2w")

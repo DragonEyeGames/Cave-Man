@@ -13,6 +13,7 @@ public partial class Player : CharacterBody2D
 	private float health = 100.0f;
 	private double jumpTime = 0.0;
 	private bool dropVelocity = false;
+	private AnimationPlayer animator;
 
 	[Export] public Vector2 explodeVelocity = Vector2.Zero;
 
@@ -23,7 +24,8 @@ public partial class Player : CharacterBody2D
 
 	public override void _Ready()
 	{
-		Modulate = GetRandomColor();
+		animator=GetNode<AnimationPlayer>("Icon/Controller");
+		//Modulate = GetRandomColor();
 		GetNode<RichTextLabel>("RichTextLabel").Text = "Player " + ID+1;
 	}
 
@@ -74,6 +76,25 @@ public partial class Player : CharacterBody2D
 		else if (explodeVelocity==Vector2.Zero)
 		{
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+		}
+		GD.Print(animator.CurrentAnimation);
+
+		if (Mathf.Abs(velocity.X) > .5 && animator.CurrentAnimation!="walk")
+		{
+			animator.Play("walk");
+		} else if(Mathf.Abs(velocity.X) < .5 && animator.CurrentAnimation != "idle")
+		{
+			animator.Play("idle");
+		}
+
+		if(velocity.X<0 && GetNode<Node2D>("Icon").Scale.X < 0)
+		{
+			GetNode<AnimationPlayer>("Flipper").Play("left");
+		}
+
+		if (velocity.X > 0 && GetNode<Node2D>("Icon").Scale.X > 0)
+		{
+			GetNode<AnimationPlayer>("Flipper").Play("right");
 		}
 
 		Velocity = velocity;
