@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://chvyysljo0i3i"]
 
 [ext_resource type="Script" uid="uid://j7irs1w1v5v2" path="res://ControllerConnecting.cs" id="1_qyldj"]
-[ext_resource type="Texture2D" uid="uid://bk6ojexahyenb" path="res://xBoxController.png" id="1_whdaa"]
+[ext_resource type="Texture2D" uid="uid://bk6ojexahyenb" path="res://Art/xBoxController.png" id="1_whdaa"]
 
 [node name="Controller Connecting" type="Control"]
 layout_mode = 3
