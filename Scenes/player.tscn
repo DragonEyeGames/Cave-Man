@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dktyi0tyvsyqp"]
+[gd_scene load_steps=12 format=3 uid="uid://dktyi0tyvsyqp"]
 
 [ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://b68vgg378wbeo" path="res://Scripts/Player.cs" id="1_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://bw2j1larpwer1" path="res://Scenes/rock.tscn" id="2_i3pqv"]
-[ext_resource type="PackedScene" uid="uid://l5vp4ipsh1qf" path="res://Scenes/bomb.tscn" id="3_x3wgy"]
-[ext_resource type="PackedScene" uid="uid://coo6klj3plb8e" path="res://Scenes/boulder.tscn" id="4_3smsa"]
+[ext_resource type="PackedScene" path="res://Scenes/bomb.tscn" id="3_x3wgy"]
+[ext_resource type="PackedScene" path="res://Scenes/boulder.tscn" id="4_3smsa"]
 [ext_resource type="Texture2D" uid="uid://cp7b6ell8p8df" path="res://Art/Arrow.png" id="4_hqtel"]
-[ext_resource type="PackedScene" uid="uid://c3j72tfm7qm8" path="res://Scenes/fish.tscn" id="4_x3wgy"]
+[ext_resource type="PackedScene" uid="uid://l8uvxcyoimr2" path="res://Scenes/fish.tscn" id="4_x3wgy"]
+[ext_resource type="PackedScene" uid="uid://40vh2mvw54s" path="res://health_points.tscn" id="5_fkybt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
 radius = 66.0
@@ -59,12 +60,7 @@ text = "Player 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Health" type="ProgressBar" parent="."]
-offset_left = -53.0
-offset_top = -134.0
-offset_right = 42.0
-offset_bottom = -107.0
-value = 100.0
+[node name="Player_UI" parent="." instance=ExtResource("5_fkybt")]
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(1, -4)
@@ -78,3 +74,5 @@ scale = Vector2(0.841346, 0.214137)
 energy = 0.3
 texture = SubResource("GradientTexture2D_sweqy")
 texture_scale = 4.81
+
+[connection signal="HealthUpdate" from="." to="Player_UI" method="UpdateHealthBar"]
