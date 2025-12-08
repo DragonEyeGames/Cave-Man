@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dfgtmf4hwotsg"]
 
 [ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_xvio3"]
-[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="2_kri6y"]
 [ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="3_4d3fe"]
 [ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Scripts/Camera.cs" id="4_3ipdw"]
+[ext_resource type="PackedScene" uid="uid://bsbdixfwhy32m" path="res://Scenes/level1Rocks.tscn" id="4_xvio3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
@@ -23,50 +23,25 @@ position = Vector2(402.532, -144)
 scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_kri6y")
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(24.6835, 163)
 scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D2"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_kri6y")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-301.899, -174)
 scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D7"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_kri6y")
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(12.0253, 414)
 scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D3"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_kri6y")
-
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(24.0506, -824)
 scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D4"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_kri6y")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(772.152, -158)
@@ -74,31 +49,25 @@ rotation = 1.5708
 scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D5"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_kri6y")
-
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-673.418, -206)
 rotation = 1.5708
 scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D6"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_kri6y")
-
 [node name="Player" parent="." instance=ExtResource("3_4d3fe")]
 position = Vector2(542, 69)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(548, 179)
+limit_left = -500
+limit_top = -510
+limit_right = 1770
+limit_bottom = 755
 position_smoothing_enabled = true
 script = ExtResource("4_3ipdw")
 margin = 200
-minZoom = 1.2
+minZoom = 0.9
 
 [node name="Markers" type="Node2D" parent="."]
 
@@ -124,11 +93,21 @@ color = Color(0.0177324, 0.0177324, 0.0177324, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -7673.0
-offset_top = -3204.0
-offset_right = 3876.0
-offset_bottom = 6267.0
+offset_left = -487.0
+offset_top = -446.0
+offset_right = 1751.0
+offset_bottom = 737.0
 color = Color(0.133196, 0.133196, 0.133196, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ta566")
+
+[node name="Rocks" parent="." instance=ExtResource("4_xvio3")]
+modulate = Color(2, 2, 2, 1)
+
+[node name="Polygon2D" type="Polygon2D" parent="Rocks"]
+z_index = 5
+position = Vector2(-0.715393, 0)
+scale = Vector2(0.998718, 1)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-491, -466, 1759, -449, 1782, -577, -558, -601)

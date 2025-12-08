@@ -20,14 +20,7 @@ public partial class Bomb : Projectile
 		if(this.spawnedInTime > 5)
 		{
 			this.bombShape.SetDeferred("disabled", false);
-			GD.Print("sdia");
-			GetNode<Node2D>("Explosion").Visible = true;
-			GetNode<AnimatedSprite2D>("Explosion").Play("explode");
-			SetDeferred("freeze", true);
-			GetNode<Node2D>("Sprite").Visible = false;
-			await ToSignal(GetTree().CreateTimer(1), "timeout");
-			GD.Print("BYE");
-			QueueFree();
+			explode();
 		}
 	}
 }
