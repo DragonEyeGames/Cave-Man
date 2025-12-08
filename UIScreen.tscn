@@ -9,6 +9,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Player1" type="Label" parent="Bottom UI"]
+layout_mode = 0
 offset_left = 1.0
 offset_top = 605.0
 offset_right = 125.0
@@ -17,6 +18,7 @@ theme_override_font_sizes/font_size = 32
 text = "Player 1"
 
 [node name="Player2" type="Label" parent="Bottom UI/Player1"]
+layout_mode = 0
 offset_left = 356.0
 offset_top = 1.0
 offset_right = 455.0
@@ -25,6 +27,7 @@ theme_override_font_sizes/font_size = 32
 text = "Player 2"
 
 [node name="Player3" type="Label" parent="Bottom UI/Player1"]
+layout_mode = 0
 offset_left = 694.0
 offset_top = 1.0
 offset_right = 779.0

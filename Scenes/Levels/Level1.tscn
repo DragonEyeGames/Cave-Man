@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfgtmf4hwotsg"]
+[gd_scene load_steps=8 format=3 uid="uid://dfgtmf4hwotsg"]
 
 [ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_xvio3"]
 [ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="3_4d3fe"]
 [ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Scripts/Camera.cs" id="4_3ipdw"]
 [ext_resource type="PackedScene" uid="uid://bsbdixfwhy32m" path="res://Scenes/level1Rocks.tscn" id="4_xvio3"]
+[ext_resource type="Script" uid="uid://devs85n0h15dr" path="res://Scripts/SignalBus.cs" id="5_kri6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
@@ -111,3 +112,8 @@ position = Vector2(-0.715393, 0)
 scale = Vector2(0.998718, 1)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-491, -466, 1759, -449, 1782, -577, -558, -601)
+
+[node name="SignalBus" type="Node2D" parent="."]
+script = ExtResource("5_kri6y")
+
+[connection signal="PlayerDead" from="SignalBus" to="." method="PlayerDead"]
