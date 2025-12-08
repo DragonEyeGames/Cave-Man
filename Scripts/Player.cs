@@ -242,6 +242,7 @@ public partial class Player : CharacterBody2D
 		health-=damage;
 		if(health<=0)
 		{
+			GameManager.signalBus.PlayerDied();
 			QueueFree();
 		} else
 		{
