@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://djwekrtwcohkj"]
+
+[ext_resource type="Script" uid="uid://2it0xx6dy1r4" path="res://Scripts/Rarity.cs" id="1_7geqe"]
+
+[node name="Rarity" type="Node"]
+script = ExtResource("1_7geqe")
