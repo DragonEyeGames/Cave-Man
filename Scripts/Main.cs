@@ -27,8 +27,8 @@ public partial class Main : Node2D
 	{
 		if(Input.IsActionJustPressed("Menu"))
 		{
-			int level = GD.RandRange(1, 2);
-			GetTree().ChangeSceneToFile("res://Scenes/Levels/Level" + level + ".tscn");
+			GetTree().Paused = !GetTree().Paused;
+			GetNode<PauseMenu>("Pause").PauseSwap();
 		}
 	}
 	
