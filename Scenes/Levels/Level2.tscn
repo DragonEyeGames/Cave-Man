@@ -1,17 +1,26 @@
-[gd_scene load_steps=12 format=3 uid="uid://c23o3ldpqg8nu"]
+[gd_scene load_steps=15 format=3 uid="uid://c23o3ldpqg8nu"]
 
 [ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_smuj1"]
-[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="2_5iseo"]
 [ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="3_4rk67"]
 [ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Scripts/Camera.cs" id="4_f8qf7"]
 [ext_resource type="Texture2D" uid="uid://c4171w1cqd61g" path="res://Art/fire.png" id="5_5iseo"]
+[ext_resource type="Shader" uid="uid://psd6r0f100ku" path="res://Scenes/Levels/fire.gdshader" id="5_f8qf7"]
 [ext_resource type="Script" uid="uid://cgkqqb551v66s" path="res://Scripts/Fire.cs" id="6_4rk67"]
+[ext_resource type="PackedScene" uid="uid://mwglo7f5ldtx" path="res://level2Rocks.tscn" id="7_f8qf7"]
+[ext_resource type="Script" uid="uid://devs85n0h15dr" path="res://Scripts/SignalBus.cs" id="8_lmdar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
 
 [sub_resource type="Environment" id="Environment_ta566"]
+background_mode = 3
 glow_enabled = true
+glow_intensity = 0.04
+glow_strength = 1.67
+glow_blend_mode = 0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lmdar"]
+shader = ExtResource("5_f8qf7")
 
 [sub_resource type="Curve" id="Curve_4rk67"]
 _limits = [0.0, 0.1, 0.0, 1.0]
@@ -39,57 +48,12 @@ position = Vector2(500, -69)
 scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
-
-[node name="Icon2" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(-586.468, 437)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
-
-[node name="Icon3" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(-766.779, 441)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
-
-[node name="Icon4" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(-727.62, 384)
-scale = Vector2(3.634, 0.501)
-texture = ExtResource("2_5iseo")
-
-[node name="Icon5" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(-681.177, 361)
-scale = Vector2(3.634, 0.501)
-texture = ExtResource("2_5iseo")
-
-[node name="Icon6" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(-692.104, 321)
-scale = Vector2(2.769, 0.382)
-texture = ExtResource("2_5iseo")
-
-[node name="Icon7" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(-673.891, 275)
-scale = Vector2(1.954, 0.269)
-texture = ExtResource("2_5iseo")
-
-[node name="Icon8" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(-674.802, 296)
-scale = Vector2(1.954, 0.269)
-texture = ExtResource("2_5iseo")
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(262.658, 326)
 rotation = 0.546768
 scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
 disabled = true
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D2"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-206.329, 321)
@@ -98,60 +62,20 @@ scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
 disabled = true
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D8"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
-
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-382.278, -47)
 scale = Vector2(0.695, 1)
 shape = SubResource("RectangleShape2D_e231j")
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D7"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-487.342, -369)
-scale = Vector2(0.35, 1)
-shape = SubResource("RectangleShape2D_e231j")
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D9"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(597.468, -343)
-scale = Vector2(0.35, 1)
-shape = SubResource("RectangleShape2D_e231j")
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D10"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(12.0253, 414)
 scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D3"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
-
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(24.0506, -824)
 scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D4"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(772.152, -158)
@@ -159,63 +83,54 @@ rotation = 1.5708
 scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D5"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
-
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-673.418, -206)
 rotation = 1.5708
 scale = Vector2(2.505, 1)
 shape = SubResource("RectangleShape2D_e231j")
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D/CollisionShape2D6"]
-position = Vector2(3.49997, 1.5)
-scale = Vector2(4.59375, 0.632812)
-texture = ExtResource("2_5iseo")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-388.608, 396, -49.3671, 185, 107.595, 186, 452.532, 400, 321.519, 506, -333.544, 515)
 
 [node name="Player" parent="." instance=ExtResource("3_4rk67")]
-position = Vector2(542, 69)
+position = Vector2(156, 91)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(548, 179)
+limit_left = -510
+limit_top = -485
+limit_right = 1755
+limit_bottom = 775
 position_smoothing_enabled = true
 script = ExtResource("4_f8qf7")
 margin = 200
-minZoom = 1.2
+minZoom = 0.8
 
 [node name="Markers" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="Markers"]
-position = Vector2(13, -51)
+position = Vector2(-232, -239)
 
 [node name="Marker2D2" type="Marker2D" parent="Markers"]
-position = Vector2(1178, -44)
+position = Vector2(1473, -223)
 
 [node name="Marker2D3" type="Marker2D" parent="Markers"]
-position = Vector2(1364, 417)
+position = Vector2(1455, 552)
 
 [node name="Marker2D4" type="Marker2D" parent="Markers"]
-position = Vector2(-200, 414)
-
-[node name="Marker2D5" type="Marker2D" parent="Markers"]
-position = Vector2(588, 634)
+position = Vector2(-241, 514)
 
 [node name="Players" type="Node2D" parent="."]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.0177324, 0.0177324, 0.0177324, 1)
+color = Color(0.018, 0.018, 0.018, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -7673.0
-offset_top = -3204.0
-offset_right = 3876.0
-offset_bottom = 6267.0
+offset_left = -512.0
+offset_top = -462.0
+offset_right = 1739.0
+offset_bottom = 752.0
 color = Color(0.133196, 0.133196, 0.133196, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -224,11 +139,13 @@ environment = SubResource("Environment_ta566")
 [node name="Fire" type="CPUParticles2D" parent="." node_paths=PackedStringArray("collider")]
 modulate = Color(1, 1, 1, 0.1)
 z_index = -1
+material = SubResource("ShaderMaterial_lmdar")
 position = Vector2(613, 569)
 emitting = false
 amount = 5000
 texture = ExtResource("5_5iseo")
 lifetime = 0.6
+explosiveness = 0.12
 emission_shape = 3
 emission_rect_extents = Vector2(20, 1)
 direction = Vector2(0, -1)
@@ -260,4 +177,20 @@ disabled = true
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 energy = 0.0
 
+[node name="Rocks" parent="." instance=ExtResource("7_f8qf7")]
+
+[node name="Polygon2D" type="Polygon2D" parent="Rocks"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-20, 756, 507, 559, 616, 554, 623, 552, 638, 553, 687, 558, 1220, 774)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Rocks"]
+position = Vector2(69, -1235)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-25, 780, 119, 717, 507, 559, 616, 554, 623, 552, 638, 553, 687, 558, 1219, 780)
+
+[node name="SignalBus" type="Node2D" parent="."]
+script = ExtResource("8_lmdar")
+
 [connection signal="body_entered" from="Fire/Area2D" to="Fire" method="PlayerHit"]
+[connection signal="body_exited" from="Fire/Area2D" to="Fire" method="PlayerLeft"]
+[connection signal="PlayerDead" from="SignalBus" to="." method="PlayerDead"]

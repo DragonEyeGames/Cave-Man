@@ -4,8 +4,10 @@ using System;
 public partial class Main : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
+	public int players;
 	public override void _Ready()
 	{
+		players=GameManager.connectedControllers;
 		for (int i = 0; i < GameManager.connectedControllers; i++)
 		{
 			Node player = GetNode<Player>("Player").Duplicate();
@@ -27,6 +29,16 @@ public partial class Main : Node2D
 		{
 			int level = GD.RandRange(1, 2);
 			GetTree().ChangeSceneToFile("res://Scenes/Levels/Level" + level + ".tscn");
+		}
+	}
+	
+	public async void PlayerDead(){
+		players-=1;
+		if(players<=1){
+			await ToSignal(GetTree().CreateTimer(1), "timeout");
+			await ToSignal(GetTree().CreateTimer(2.5f), "timeout");
+			int level = GD.RandRange(1, 2);
+			GetTree().CallDeferred("change_scene_to_file", "res://Scenes/Levels/Level" + level + ".tscn");
 		}
 	}
 }

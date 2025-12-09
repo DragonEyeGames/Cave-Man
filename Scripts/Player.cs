@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using System;
 
 public partial class Player : CharacterBody2D
@@ -13,6 +14,7 @@ public partial class Player : CharacterBody2D
 	private float health = 100.0f;
 	private double jumpTime = 0.0;
 	private bool dropVelocity = false;
+	private AnimationPlayer animator;
 
 	[Export] public Vector2 explodeVelocity = Vector2.Zero;
 
@@ -23,7 +25,11 @@ public partial class Player : CharacterBody2D
 
 	public override void _Ready()
 	{
-		Modulate = GetRandomColor();
+		GetNode<Sprite2D>("Icon/Head/Hat").Texture=GD.Load<Texture2D>(GetRandomFile("res://Art/CharacterCreation/Hat/"));
+		GetNode<Sprite2D>("Icon/Head/Face").Texture=GD.Load<Texture2D>(GetRandomFile("res://Art/CharacterCreation/Face/"));
+		GetNode<Sprite2D>("Icon/Head/Accessory").Texture=GD.Load<Texture2D>(GetRandomFile("res://Art/CharacterCreation/Accessory/"));
+		animator=GetNode<AnimationPlayer>("Icon/Controller");
+		//Modulate = GetRandomColor();
 		GetNode<RichTextLabel>("RichTextLabel").Text = "Player " + ID+1;
 	}
 
@@ -75,6 +81,25 @@ public partial class Player : CharacterBody2D
 		{
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 		}
+		GD.Print(animator.CurrentAnimation);
+
+		if (Mathf.Abs(velocity.X) > .5 && animator.CurrentAnimation!="walk")
+		{
+			animator.Play("walk");
+		} else if(Mathf.Abs(velocity.X) < .5 && animator.CurrentAnimation != "idle")
+		{
+			animator.Play("idle");
+		}
+
+		if(velocity.X<0 && GetNode<Node2D>("Icon").Scale.X < 0)
+		{
+			GetNode<AnimationPlayer>("Flipper").Play("left");
+		}
+
+		if (velocity.X > 0 && GetNode<Node2D>("Icon").Scale.X > 0)
+		{
+			GetNode<AnimationPlayer>("Flipper").Play("right");
+		}
 
 		Velocity = velocity;
 		if(explodeVelocity!=Vector2.Zero)
@@ -105,6 +130,11 @@ public partial class Player : CharacterBody2D
 				GetNode<ColorRect>("ColorRect").Position = new Vector2(-GetNode<ColorRect>("ColorRect").Position.X, -GetNode<ColorRect>("ColorRect").Position.Y);
 
 			}
+			GetNode<Sprite2D>("Icon/Arm").Visible=false;
+			GetNode<Sprite2D>("Icon/DummyArm").Visible=true;
+			GetNode<Sprite2D>("Icon/DummyArm").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
+			GetNode<Sprite2D>("Icon/DummyArm").RotationDegrees-=90;
+			GD.Print(GetNode<Sprite2D>("Icon/DummyArm").RotationDegrees);
 			GetNode<Node2D>("Arrow").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
 			rockVelocity += (float)delta * 6;
 
@@ -113,6 +143,9 @@ public partial class Player : CharacterBody2D
 				rockVelocity = 10;
 			}
 
+		} else {
+			GetNode<Sprite2D>("Icon/Arm").Visible=true;
+			GetNode<Sprite2D>("Icon/DummyArm").Visible=false;
 		}
 		shakePlayer();
 	}
@@ -209,6 +242,7 @@ public partial class Player : CharacterBody2D
 		health-=damage;
 		if(health<=0)
 		{
+			GameManager.signalBus.PlayerDied();
 			QueueFree();
 		} else
 		{
@@ -216,4 +250,37 @@ public partial class Player : CharacterBody2D
 		}
 
 	}
+	
+	private string GetRandomFile(string folderPath)
+{
+	DirAccess dir = DirAccess.Open(folderPath);
+	if (dir == null)
+	{
+		GD.PushError($"Could not open: {folderPath}");
+		return null;
+	}
+
+	dir.ListDirBegin();
+	Array<string> files = new Array<string>();
+
+	string fileName = dir.GetNext();
+	while (fileName != "")
+	{
+		if (!dir.CurrentIsDir() && fileName.EndsWith(".png")) // skip folders
+			files.Add(folderPath + fileName);
+
+		fileName = dir.GetNext();
+	}
+
+	dir.ListDirEnd();
+
+	if (files.Count == 0)
+		return null;
+
+	// Pick random
+	Random rand = new Random();
+	int index = rand.Next(files.Count);
+
+	return files[index];
+}
 }
