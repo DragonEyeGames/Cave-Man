@@ -10,36 +10,61 @@ offset_bottom = 40.0
 
 [node name="Player1" type="Label" parent="Bottom UI"]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 605.0
-offset_right = 125.0
-offset_bottom = 650.0
-theme_override_font_sizes/font_size = 32
+offset_left = 124.0
+offset_top = 961.0
+offset_right = 305.0
+offset_bottom = 1026.0
+theme_override_font_sizes/font_size = 47
 text = "Player 1"
 
 [node name="Player2" type="Label" parent="Bottom UI/Player1"]
 layout_mode = 0
-offset_left = 356.0
+offset_left = 540.0
 offset_top = 1.0
-offset_right = 455.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 32
+offset_right = 721.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 47
 text = "Player 2"
 
 [node name="Player3" type="Label" parent="Bottom UI/Player1"]
 layout_mode = 0
-offset_left = 694.0
+offset_left = 1076.0
 offset_top = 1.0
-offset_right = 779.0
-offset_bottom = 43.0
-theme_override_font_sizes/font_size = 32
+offset_right = 1257.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 47
 text = "Player 3"
 
 [node name="Player4" type="Label" parent="Bottom UI/Player1"]
 layout_mode = 0
-offset_left = 1023.0
-offset_top = 1.0
-offset_right = 1147.0
-offset_bottom = 49.0
-theme_override_font_sizes/font_size = 32
+offset_left = 1540.0
+offset_top = -2.0
+offset_right = 1721.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 47
 text = "Player 4"
+
+[node name="HSlider" type="HSlider" parent="Bottom UI"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 1022.0
+offset_right = 397.0
+offset_bottom = 1038.0
+
+[node name="HSlider" type="HSlider" parent="Bottom UI/HSlider"]
+offset_left = 564.0
+offset_top = 1.0
+offset_right = 915.0
+offset_bottom = 17.0
+
+[node name="HSlider" type="HSlider" parent="Bottom UI/HSlider/HSlider"]
+offset_left = 549.0
+offset_top = -1.0
+offset_right = 903.0
+offset_bottom = 15.0
+
+[node name="HSlider" type="HSlider" parent="Bottom UI/HSlider/HSlider/HSlider"]
+offset_left = 462.0
+offset_top = -1.0
+offset_right = 814.0
+offset_bottom = 15.0
