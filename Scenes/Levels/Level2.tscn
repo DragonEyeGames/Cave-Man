@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c23o3ldpqg8nu"]
+[gd_scene load_steps=20 format=3 uid="uid://c23o3ldpqg8nu"]
 
 [ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_smuj1"]
 [ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="3_4rk67"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://devs85n0h15dr" path="res://Scripts/SignalBus.cs" id="8_lmdar"]
 [ext_resource type="PackedScene" uid="uid://bf1a8ug4uwghb" path="res://Scenes/pause.tscn" id="9_d1swa"]
 [ext_resource type="Texture2D" uid="uid://cka3tj67m48ym" path="res://Art/Confetti.png" id="10_ipaot"]
+[ext_resource type="PackedScene" uid="uid://bgs3ot6ys5yn6" path="res://UIScreen.tscn" id="12_ngp1c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
@@ -228,6 +229,11 @@ texture = ExtResource("10_ipaot")
 lifetime = 3.0
 visibility_rect = Rect2(-992.285, -979.47, 3000, 4000)
 process_material = SubResource("ParticleProcessMaterial_ao4h1")
+
+[node name="UI Layer" type="CanvasLayer" parent="."]
+
+[node name="Node2D2" parent="UI Layer" instance=ExtResource("12_ngp1c")]
+position = Vector2(37, -17)
 
 [connection signal="body_entered" from="Fire/Area2D" to="Fire" method="PlayerHit"]
 [connection signal="body_exited" from="Fire/Area2D" to="Fire" method="PlayerLeft"]

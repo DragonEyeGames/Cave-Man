@@ -22,9 +22,12 @@ layout_mode = 2
 
 [node name="PlayerOrganizer2" parent="Bottom UI/HBoxContainer" instance=ExtResource("1_bqmi3")]
 layout_mode = 2
+playerID = 1
 
 [node name="PlayerOrganizer3" parent="Bottom UI/HBoxContainer" instance=ExtResource("1_bqmi3")]
 layout_mode = 2
+playerID = 2
 
 [node name="PlayerOrganizer4" parent="Bottom UI/HBoxContainer" instance=ExtResource("1_bqmi3")]
 layout_mode = 2
+playerID = 3

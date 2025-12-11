@@ -36,7 +36,7 @@ public partial class Player : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		
+		GameManager.playerHealths[ID]=health;
 		GetNode<RichTextLabel>("RichTextLabel").Text = "Player " + (ID + 1);
 		Vector2 velocity = Velocity;
 

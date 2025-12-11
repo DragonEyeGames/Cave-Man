@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dfgtmf4hwotsg"]
+[gd_scene load_steps=12 format=3 uid="uid://dfgtmf4hwotsg"]
 
 [ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_xvio3"]
 [ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="3_4d3fe"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://devs85n0h15dr" path="res://Scripts/SignalBus.cs" id="5_kri6y"]
 [ext_resource type="PackedScene" uid="uid://bf1a8ug4uwghb" path="res://Scenes/pause.tscn" id="6_4d3fe"]
 [ext_resource type="Texture2D" uid="uid://cka3tj67m48ym" path="res://Art/Confetti.png" id="7_3ipdw"]
+[ext_resource type="PackedScene" uid="uid://bgs3ot6ys5yn6" path="res://UIScreen.tscn" id="8_8h4de"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
@@ -34,7 +35,7 @@ glow_intensity = 0.04
 glow_strength = 1.67
 glow_blend_mode = 0
 
-[node name="Node2D3" type="Node2D" node_paths=PackedStringArray("particles")]
+[node name="Node2D4" type="Node2D" node_paths=PackedStringArray("particles")]
 script = ExtResource("1_xvio3")
 particles = NodePath("GPUParticles2D")
 
@@ -153,5 +154,10 @@ process_material = SubResource("ParticleProcessMaterial_8h4de")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3ipdw")
+
+[node name="UI Layer" type="CanvasLayer" parent="."]
+
+[node name="Node2D2" parent="UI Layer" instance=ExtResource("8_8h4de")]
+position = Vector2(37, -17)
 
 [connection signal="PlayerDead" from="SignalBus" to="." method="PlayerDead"]
