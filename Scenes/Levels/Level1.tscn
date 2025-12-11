@@ -34,7 +34,7 @@ glow_intensity = 0.04
 glow_strength = 1.67
 glow_blend_mode = 0
 
-[node name="Node2D2" type="Node2D" node_paths=PackedStringArray("particles")]
+[node name="Node2D3" type="Node2D" node_paths=PackedStringArray("particles")]
 script = ExtResource("1_xvio3")
 particles = NodePath("GPUParticles2D")
 
