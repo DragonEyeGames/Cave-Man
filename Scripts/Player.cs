@@ -139,7 +139,6 @@ public partial class Player : CharacterBody2D
 			GetNode<Sprite2D>("Icon/DummyArm").Visible=true;
 			GetNode<Sprite2D>("Icon/DummyArm").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
 			GetNode<Sprite2D>("Icon/DummyArm").RotationDegrees-=90;
-			GD.Print(GetNode<Sprite2D>("Icon/DummyArm").RotationDegrees);
 			GetNode<Node2D>("Arrow").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
 			rockVelocity += (float)delta * 6;
 

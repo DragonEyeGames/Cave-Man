@@ -1,0 +1,356 @@
+[gd_scene load_steps=7 format=3 uid="uid://bf1a8ug4uwghb"]
+
+[ext_resource type="Script" uid="uid://cyuaxf2wfkjbg" path="res://Scripts/PauseMenu.cs" id="1_o80xk"]
+[ext_resource type="FontFile" uid="uid://clmmkx0ylh45l" path="res://Fonts/Text.otf" id="2_l2mpd"]
+
+[sub_resource type="Animation" id="Animation_l2mpd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause/VBoxContainer/Restart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/VBoxContainer/Connect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pause/VBoxContainer/Menu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pause/VBoxContainer/Restart/Restart:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 4)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pause/VBoxContainer/Connect/Continue:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 4)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pause/VBoxContainer/Menu/Menu:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_e0jm0"]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause/VBoxContainer/Restart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/VBoxContainer/Connect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pause/VBoxContainer/Menu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pause/VBoxContainer/Restart/Restart:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 4), Vector2(-1457, -17)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pause/VBoxContainer/Connect/Continue:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 4), Vector2(9, -660)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pause/VBoxContainer/Menu/Menu:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 4), Vector2(1484, 29)]
+}
+
+[sub_resource type="Animation" id="Animation_5a6ek"]
+resource_name = "reveal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pause/VBoxContainer/Restart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pause/VBoxContainer/Connect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pause/VBoxContainer/Menu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pause/VBoxContainer/Restart/Restart:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1457, -17), Vector2(5, 4)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pause/VBoxContainer/Connect/Continue:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(9, -660), Vector2(5, 4)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pause/VBoxContainer/Menu/Menu:position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1484, 29), Vector2(5, 4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ipdw"]
+_data = {
+&"RESET": SubResource("Animation_l2mpd"),
+&"hide": SubResource("Animation_e0jm0"),
+&"reveal": SubResource("Animation_5a6ek")
+}
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_o80xk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_3ipdw")
+}
+speed_scale = 5.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 589.0
+offset_right = 1255.0
+offset_bottom = 1083.0
+alignment = 1
+
+[node name="Restart" type="Control" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(677, 150)
+layout_mode = 2
+
+[node name="Restart" type="Button" parent="VBoxContainer/Restart"]
+z_index = 3
+custom_minimum_size = Vector2(666, 140)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 671.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("2_l2mpd")
+theme_override_font_sizes/font_size = 250
+icon_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Restart/Restart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_l2mpd")
+theme_override_font_sizes/normal_font_size = 100
+text = "Restart"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Connect" type="Control" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(677, 150)
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="VBoxContainer/Connect"]
+z_index = 3
+custom_minimum_size = Vector2(666, 140)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 671.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("2_l2mpd")
+theme_override_font_sizes/font_size = 250
+icon_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Connect/Continue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_l2mpd")
+theme_override_font_sizes/normal_font_size = 87
+text = "Continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="Control" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(677, 150)
+layout_mode = 2
+
+[node name="Menu" type="Button" parent="VBoxContainer/Menu"]
+z_index = 3
+custom_minimum_size = Vector2(666, 140)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 671.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("2_l2mpd")
+theme_override_font_sizes/font_size = 250
+icon_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Menu/Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_l2mpd")
+theme_override_font_sizes/normal_font_size = 78
+text = "Return to Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="focus_entered" from="VBoxContainer/Restart/Restart" to="." method="Focus"]
+[connection signal="pressed" from="VBoxContainer/Restart/Restart" to="." method="Restart"]
+[connection signal="focus_entered" from="VBoxContainer/Connect/Continue" to="." method="Focus"]
+[connection signal="pressed" from="VBoxContainer/Connect/Continue" to="." method="Continue"]
+[connection signal="focus_entered" from="VBoxContainer/Menu/Menu" to="." method="Focus"]
+[connection signal="pressed" from="VBoxContainer/Menu/Menu" to="." method="Menu"]
