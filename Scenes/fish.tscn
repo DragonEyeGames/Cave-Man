@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6ei8wl6wo5gg" path="res://Scripts/Fish.cs" id="1_4fqy1"]
 [ext_resource type="Texture2D" uid="uid://cc2apbkl87a4c" path="res://Art/Fish.png" id="2_4fqy1"]
-[ext_resource type="AudioStream" uid="uid://dorskcca76yap" path="res://Music/I am just a fish (full cover).mp3" id="3_4fqy1"]
+[ext_resource type="AudioStream" uid="uid://wq0rcxlcg1qi" path="res://Music/Fish.mp3" id="3_4fqy1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4fqy1"]
 radius = 9.4964
@@ -49,7 +49,7 @@ _data = {
 }
 
 [node name="Fish" type="RigidBody2D"]
-modulate = Color(2, 2, 2, 1)
+modulate = Color(5, 5, 5, 1)
 collision_layer = 2
 collision_mask = 3
 angular_velocity = 1.74533
@@ -121,7 +121,6 @@ bone_angle = 180.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_4fqy1")
-volume_db = 15.0
 autoplay = true
 max_polyphony = 100
 

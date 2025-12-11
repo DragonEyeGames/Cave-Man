@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://ctf0v2u1jvrrr" path="res://Scripts/Camera.cs" id="4_3ipdw"]
 [ext_resource type="PackedScene" uid="uid://bsbdixfwhy32m" path="res://Scenes/level1Rocks.tscn" id="4_xvio3"]
 [ext_resource type="Script" uid="uid://devs85n0h15dr" path="res://Scripts/SignalBus.cs" id="5_kri6y"]
-[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="6_4d3fe"]
+[ext_resource type="PackedScene" uid="uid://bf1a8ug4uwghb" path="res://Scenes/pause.tscn" id="6_4d3fe"]
 [ext_resource type="Texture2D" uid="uid://cka3tj67m48ym" path="res://Art/Confetti.png" id="7_3ipdw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]

@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bgs3ot6ys5yn6"]
+[gd_scene load_steps=2 format=3 uid="uid://bgs3ot6ys5yn6"]
+
+[ext_resource type="PackedScene" uid="uid://bt8nd4fsa1wyd" path="res://Scenes/playerOrganizer.tscn" id="1_bqmi3"]
 
 [node name="Node2D2" type="Node2D"]
 
@@ -8,63 +10,21 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Player1" type="Label" parent="Bottom UI"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Bottom UI"]
 layout_mode = 0
-offset_left = 124.0
-offset_top = 961.0
-offset_right = 305.0
-offset_bottom = 1026.0
-theme_override_font_sizes/font_size = 47
-text = "Player 1"
+offset_top = 875.0
+offset_right = 1920.0
+offset_bottom = 1055.0
+alignment = 1
 
-[node name="Player2" type="Label" parent="Bottom UI/Player1"]
-layout_mode = 0
-offset_left = 540.0
-offset_top = 1.0
-offset_right = 721.0
-offset_bottom = 66.0
-theme_override_font_sizes/font_size = 47
-text = "Player 2"
+[node name="PlayerOrganizer" parent="Bottom UI/HBoxContainer" instance=ExtResource("1_bqmi3")]
+layout_mode = 2
 
-[node name="Player3" type="Label" parent="Bottom UI/Player1"]
-layout_mode = 0
-offset_left = 1076.0
-offset_top = 1.0
-offset_right = 1257.0
-offset_bottom = 66.0
-theme_override_font_sizes/font_size = 47
-text = "Player 3"
+[node name="PlayerOrganizer2" parent="Bottom UI/HBoxContainer" instance=ExtResource("1_bqmi3")]
+layout_mode = 2
 
-[node name="Player4" type="Label" parent="Bottom UI/Player1"]
-layout_mode = 0
-offset_left = 1540.0
-offset_top = -2.0
-offset_right = 1721.0
-offset_bottom = 63.0
-theme_override_font_sizes/font_size = 47
-text = "Player 4"
+[node name="PlayerOrganizer3" parent="Bottom UI/HBoxContainer" instance=ExtResource("1_bqmi3")]
+layout_mode = 2
 
-[node name="HSlider" type="HSlider" parent="Bottom UI"]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 1022.0
-offset_right = 397.0
-offset_bottom = 1038.0
-
-[node name="HSlider" type="HSlider" parent="Bottom UI/HSlider"]
-offset_left = 564.0
-offset_top = 1.0
-offset_right = 915.0
-offset_bottom = 17.0
-
-[node name="HSlider" type="HSlider" parent="Bottom UI/HSlider/HSlider"]
-offset_left = 549.0
-offset_top = -1.0
-offset_right = 903.0
-offset_bottom = 15.0
-
-[node name="HSlider" type="HSlider" parent="Bottom UI/HSlider/HSlider/HSlider"]
-offset_left = 462.0
-offset_top = -1.0
-offset_right = 814.0
-offset_bottom = 15.0
+[node name="PlayerOrganizer4" parent="Bottom UI/HBoxContainer" instance=ExtResource("1_bqmi3")]
+layout_mode = 2
