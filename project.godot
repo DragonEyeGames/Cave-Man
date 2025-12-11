@@ -22,6 +22,7 @@ buses/default_bus_layout=""
 [autoload]
 
 GameManager="*res://Scripts/GameManager.cs"
+MusicGlobal="*res://Scenes/musicGlobal.tscn"
 
 [display]
 
@@ -156,4 +157,4 @@ move_right={
 [rendering]
 
 viewport/hdr_2d=true
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(0.215902, 0.215902, 0.215902, 1)

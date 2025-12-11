@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://l5vp4ipsh1qf"]
+[gd_scene load_steps=75 format=3 uid="uid://l5vp4ipsh1qf"]
 
 [ext_resource type="Script" uid="uid://dtyx1ulg210tr" path="res://Scripts/Bomb.cs" id="1_pi1th"]
 [ext_resource type="Texture2D" uid="uid://b6cx7u75c2wvg" path="res://Art/Bomb.png" id="2_vw0xf"]
@@ -62,6 +62,7 @@
 [ext_resource type="Texture2D" uid="uid://c2vinbb5eauhk" path="res://Art/Explosion 1/explosion0058.png" id="60_2g3lx"]
 [ext_resource type="Texture2D" uid="uid://motyxooe8f01" path="res://Art/Explosion 1/explosion0059.png" id="61_xdnxx"]
 [ext_resource type="Texture2D" uid="uid://o456gwmbqi7u" path="res://Art/Explosion 1/explosion0060.png" id="62_5lg5l"]
+[ext_resource type="AudioStream" uid="uid://cgh6pgm6vmu2k" path="res://Music/Boom.mp3" id="63_vw0xf"]
 
 [sub_resource type="Curve" id="Curve_kdyat"]
 _limits = [0.0, 10.0, 0.0, 1.0]
@@ -457,6 +458,11 @@ texture_scale = 10.0
 libraries = {
 &"": SubResource("AnimationLibrary_sfpcs")
 }
+
+[node name="Boom" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("63_vw0xf")
+max_polyphony = 10
+parameters/looping = false
 
 [connection signal="body_entered" from="Area2D" to="." method="PlayerHit"]
 [connection signal="body_entered" from="Bomb" to="." method="PlayerExplode"]

@@ -28,6 +28,13 @@ public abstract partial class Projectile : RigidBody2D
 				if (player.ID != playerID || spawnedInTime >= 0.7f)
 				{
 					GD.Print(Mathf.Round(LinearVelocity.Length() / 50));
+					var p = new AudioStreamPlayer();
+					p.Stream = GD.Load<AudioStream>("res://Music/Collision.mp3");
+					p.VolumeDb=-5;
+					p.Finished += () => p.QueueFree();   // auto-delete when done
+
+					GetTree().CurrentScene.AddChild(p);  // put it in main scene
+					p.Play();
 					if (velocityDamage)
 					{
 						player.Damage(Mathf.Round((float)LinearVelocity.Length() / 50.0f) * damageMultiplier);
@@ -89,6 +96,7 @@ public abstract partial class Projectile : RigidBody2D
 	
 	public async void explode(){
 		if(!GetNode<Node2D>("Explosion").Visible){
+			GetNode<AudioStreamPlayer>("Boom").Play();
 			GetNode<Node2D>("Explosion").Visible = true;
 			GetNode<AnimatedSprite2D>("Explosion").Play("explode");
 			GetNode<Node2D>("Sprite").Visible = false;

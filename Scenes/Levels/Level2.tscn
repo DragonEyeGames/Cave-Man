@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c23o3ldpqg8nu"]
+[gd_scene load_steps=16 format=3 uid="uid://c23o3ldpqg8nu"]
 
 [ext_resource type="Script" uid="uid://cnks1yopa7rw3" path="res://Scripts/Main.cs" id="1_smuj1"]
 [ext_resource type="PackedScene" uid="uid://dktyi0tyvsyqp" path="res://Scenes/player.tscn" id="3_4rk67"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c4171w1cqd61g" path="res://Art/fire.png" id="5_5iseo"]
 [ext_resource type="Shader" uid="uid://psd6r0f100ku" path="res://Scenes/Levels/fire.gdshader" id="5_f8qf7"]
 [ext_resource type="Script" uid="uid://cgkqqb551v66s" path="res://Scripts/Fire.cs" id="6_4rk67"]
+[ext_resource type="AudioStream" uid="uid://con0sqonniuym" path="res://Music/fire.ogg" id="7_d1swa"]
 [ext_resource type="PackedScene" uid="uid://mwglo7f5ldtx" path="res://level2Rocks.tscn" id="7_f8qf7"]
 [ext_resource type="Script" uid="uid://devs85n0h15dr" path="res://Scripts/SignalBus.cs" id="8_lmdar"]
 
@@ -173,6 +174,10 @@ collision_mask = 4
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Fire/Area2D"]
 polygon = PackedVector2Array(140, 38, -146, 29, -387, -1031, 393, -1039)
 disabled = true
+
+[node name="Fire" type="AudioStreamPlayer" parent="Fire"]
+stream = ExtResource("7_d1swa")
+volume_db = 5.0
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 energy = 0.0
