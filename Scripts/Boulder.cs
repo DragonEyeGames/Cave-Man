@@ -9,6 +9,7 @@ public partial class Boulder : Projectile
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Ready()
 	{
+		rarity = Rarity.Uncommon;
 		this.velocityDamage = newDamage;
 		this.damageMultiplier = newMultiplier;
 	}

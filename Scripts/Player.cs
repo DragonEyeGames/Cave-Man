@@ -179,6 +179,9 @@ public partial class Player : CharacterBody2D
 			newProjectile = rock.Instantiate() as Projectile;
 		}
 
+		//update arrow color based on item rarity
+		var color = RarityColors.GetColor(newProjectile.rarity);
+		arrow.SelfModulate = color;
 
 		GetParent().GetParent().AddChild(newProjectile);
 

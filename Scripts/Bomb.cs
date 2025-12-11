@@ -10,6 +10,7 @@ public partial class Bomb : Projectile
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Ready()
 	{
+		rarity = Rarity.Rare;
 		this.velocityDamage = velocityBased;
 		this.damage = newDamage;
 		this.exploding = explodingProjectile;
