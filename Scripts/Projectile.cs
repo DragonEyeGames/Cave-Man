@@ -12,6 +12,7 @@ public abstract partial class Projectile : RigidBody2D
 	protected bool exploding = false;
 	[Export]
 	public CollisionShape2D bombShape;
+	public Rarity rarity;
 
 	public void countTime(double delta)
 	{

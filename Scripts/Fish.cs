@@ -9,6 +9,7 @@ public partial class Fish : Projectile
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Ready()
 	{
+		rarity = Rarity.Legendary;
 		this.velocityDamage = newDamage;
 		this.damage = 200.0f;
 	}

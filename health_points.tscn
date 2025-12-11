@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnutxevmfq8kw"]
+
+[ext_resource type="Script" path="res://PlayerUI.cs" id="1_cnj67"]
+[ext_resource type="Texture2D" uid="uid://4fhi51806q4k" path="res://Art/icon.svg" id="2_ulc3c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yho6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ulc3c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player_UI" type="Control"]
+z_index = 6
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cnj67")
+
+[node name="VFlowContainer" type="VFlowContainer" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 78.0
+offset_bottom = 82.0
+
+[node name="health" type="ProgressBar" parent="VFlowContainer"]
+layout_mode = 2
+value = 100.0
+
+[node name="score" type="Label" parent="VFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "0
+"
+
+[node name="lives" type="AnimatedSprite2D" parent="."]
+position = Vector2(24, 67)
+scale = Vector2(0.121094, 0.121094)
+sprite_frames = SubResource("SpriteFrames_yho6w")
