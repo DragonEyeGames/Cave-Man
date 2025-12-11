@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://cgkqqb551v66s" path="res://Scripts/Fire.cs" id="6_4rk67"]
 [ext_resource type="PackedScene" uid="uid://mwglo7f5ldtx" path="res://level2Rocks.tscn" id="7_f8qf7"]
 [ext_resource type="Script" uid="uid://devs85n0h15dr" path="res://Scripts/SignalBus.cs" id="8_lmdar"]
-[ext_resource type="PackedScene" uid="uid://bf1a8ug4uwghb" path="res://Scenes/pause.tscn" id="9_d1swa"]
+[ext_resource type="PackedScene" path="res://Scenes/pause.tscn" id="9_d1swa"]
 [ext_resource type="Texture2D" uid="uid://cka3tj67m48ym" path="res://Art/Confetti.png" id="10_ipaot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
@@ -54,8 +54,9 @@ scale_max = 0.06
 hue_variation_min = -1.0
 hue_variation_max = 1.0
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("particles")]
 script = ExtResource("1_smuj1")
+particles = NodePath("GPUParticles2D")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(545, 347)
