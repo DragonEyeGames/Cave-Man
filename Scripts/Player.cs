@@ -15,7 +15,7 @@ public partial class Player : CharacterBody2D
 	private double jumpTime = 0.0;
 	private bool dropVelocity = false;
 	private AnimationPlayer animator;
-
+	private bool dead=false;
 	[Export] public Vector2 explodeVelocity = Vector2.Zero;
 
 	[Export] public PackedScene rock;
@@ -35,7 +35,7 @@ public partial class Player : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-
+		
 		GetNode<RichTextLabel>("RichTextLabel").Text = "Player " + (ID + 1);
 		Vector2 velocity = Velocity;
 
@@ -43,6 +43,14 @@ public partial class Player : CharacterBody2D
 		if (!IsOnFloor())
 		{
 			velocity += GetGravity() * (float)delta;
+		}
+		
+		if(dead){
+			velocity.Y+=100;
+			velocity.X=0;
+			Velocity=velocity;
+			MoveAndSlide();
+			return;
 		}
 
 		// Handle Jump.
@@ -81,7 +89,6 @@ public partial class Player : CharacterBody2D
 		{
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 		}
-		GD.Print(animator.CurrentAnimation);
 
 		if (Mathf.Abs(velocity.X) > .5 && animator.CurrentAnimation!="walk")
 		{
@@ -134,7 +141,6 @@ public partial class Player : CharacterBody2D
 			GetNode<Sprite2D>("Icon/DummyArm").Visible=true;
 			GetNode<Sprite2D>("Icon/DummyArm").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
 			GetNode<Sprite2D>("Icon/DummyArm").RotationDegrees-=90;
-			GD.Print(GetNode<Sprite2D>("Icon/DummyArm").RotationDegrees);
 			GetNode<Node2D>("Arrow").LookAt(GetNode<ColorRect>("ColorRect").GlobalPosition);
 			rockVelocity += (float)delta * 6;
 
@@ -158,6 +164,10 @@ public partial class Player : CharacterBody2D
 	
 	private void throwObject()
 	{
+		if(dead){
+			return;
+		}
+		GetNode<AudioStreamPlayer2D>("Whoosh").Play();
 		Node2D arrow = GetNode<Node2D>("Arrow");
 		arrow.Scale = new Vector2(arrow.Scale.X, .03f);
 
@@ -242,11 +252,21 @@ public partial class Player : CharacterBody2D
 
 	public void Damage(float damage)
 	{
+		if(dead){
+			return;
+		}
 		health-=damage;
 		if(health<=0)
 		{
+			GetNode<AudioStreamPlayer2D>("Death").Play();
+			GetNode<ProgressBar>("Health").Value = 0;
 			GameManager.signalBus.PlayerDied();
-			QueueFree();
+			dead=true;
+			animator.Play("death");
+			SetProcess(false);
+			
+			CallDeferred("reparent", GetParent().GetParent());
+			//SetPhysicsProcess(false);
 		} else
 		{
 			GetNode<ProgressBar>("Health").Value = health;

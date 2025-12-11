@@ -4,7 +4,7 @@ using System;
 public partial class Bomb : Projectile
 {
 	private bool velocityBased = false;
-	private float newDamage = 40.0f;
+	private float newDamage = 65.0f;
 	private bool explodingProjectile = true;
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
