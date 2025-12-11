@@ -17,6 +17,7 @@ public partial class Player : CharacterBody2D
 	private AnimationPlayer animator;
 	private bool dead=false;
 	[Export] public Vector2 explodeVelocity = Vector2.Zero;
+	private Projectile newProjectile = null;
 
 	[Export] public PackedScene rock;
 	[Export] public PackedScene bomb;
@@ -173,26 +174,6 @@ public partial class Player : CharacterBody2D
 
 		arrow.Visible = false;
 
-		Projectile newProjectile = null;
-		int random = GD.RandRange(1, 5);
-		if(random == 5)
-		{
-			newProjectile = bomb.Instantiate() as Projectile;
-		} else if(random == 4)
-		{
-			newProjectile = boulder.Instantiate() as Projectile;
-		} else if(random == 3)
-		{
-			newProjectile = fish.Instantiate() as Projectile;
-		} else
-		{
-			newProjectile = rock.Instantiate() as Projectile;
-		}
-
-		//update arrow color based on item rarity
-		var color = RarityColors.GetColor(newProjectile.rarity);
-		arrow.SelfModulate = color;
-
 		GetParent().GetParent().AddChild(newProjectile);
 
 		newProjectile.playerID = ID;
@@ -218,7 +199,22 @@ public partial class Player : CharacterBody2D
 			if (@event.IsActionPressed("Throw"))
 			{
 				throwing = true;
-
+				int random = GD.RandRange(1, 20);
+				if(random <= (int)Rarity.Common)
+				{
+					newProjectile = rock.Instantiate() as Projectile;
+				} else if(random <= (int)Rarity.Uncommon)
+				{
+					newProjectile = boulder.Instantiate() as Projectile;
+				} else if(random <= (int)Rarity.Rare)
+				{
+					newProjectile = bomb.Instantiate() as Projectile;
+				} else
+				{
+					newProjectile = fish.Instantiate() as Projectile;
+				}
+				//var color = RarityColors.GetColor(newProjectile.rarity);
+				//GetNode<Node2D>("Arrow").SelfModulate = color;
 			}
 
 			if(@event.IsActionReleased("Throw") && throwing==true)
