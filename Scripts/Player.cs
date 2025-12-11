@@ -46,7 +46,9 @@ public partial class Player : CharacterBody2D
 		}
 		
 		if(dead){
-			velocity.Y=100;
+			velocity.Y+=100;
+			velocity.X=0;
+			Velocity=velocity;
 			MoveAndSlide();
 			return;
 		}
@@ -259,7 +261,9 @@ public partial class Player : CharacterBody2D
 			dead=true;
 			animator.Play("death");
 			SetProcess(false);
-			SetPhysicsProcess(false);
+			
+			CallDeferred("reparent", GetParent().GetParent());
+			//SetPhysicsProcess(false);
 		} else
 		{
 			GetNode<ProgressBar>("Health").Value = health;
