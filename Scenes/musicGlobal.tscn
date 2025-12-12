@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cni58gwyfiw88"]
 
 [ext_resource type="AudioStream" uid="uid://crq6supwpas4m" path="res://Music/epicMusic.mp3" id="1_6w3wl"]
-[ext_resource type="Script" uid="uid://c8xtew0ci3w04" path="res://Scenes/MusicGlobal.cs" id="1_fbd66"]
+[ext_resource type="Script" uid="uid://c8xtew0ci3w04" path="res://Scripts/MusicGlobal.cs" id="1_fbd66"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fbd66")

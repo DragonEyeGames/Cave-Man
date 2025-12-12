@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bt8nd4fsa1wyd"]
 
 [ext_resource type="Texture2D" uid="uid://cxi22b1erfuh7" path="res://Art/CharacterCreation/Base/Head.png" id="1_7pat5"]
-[ext_resource type="Script" uid="uid://nd8e0io5p8lb" path="res://Scenes/PlayerOrganizer.cs" id="1_kx7vr"]
+[ext_resource type="Script" uid="uid://nd8e0io5p8lb" path="res://Scripts/PlayerOrganizer.cs" id="1_kx7vr"]
 [ext_resource type="Texture2D" uid="uid://c8h2tnapfl3yd" path="res://Art/CharacterCreation/Face/Zuko.png" id="2_kx7vr"]
 [ext_resource type="Texture2D" uid="uid://ce5eohu3s8hih" path="res://Art/CharacterCreation/Accessory/Glasses.png" id="3_uc58j"]
 [ext_resource type="Texture2D" uid="uid://c3pab24rqu1vf" path="res://Art/CharacterCreation/Hat/SantaHat.png" id="4_bkyfq"]

@@ -7,11 +7,11 @@
 [ext_resource type="Shader" uid="uid://psd6r0f100ku" path="res://Scenes/Levels/fire.gdshader" id="5_f8qf7"]
 [ext_resource type="Script" uid="uid://cgkqqb551v66s" path="res://Scripts/Fire.cs" id="6_4rk67"]
 [ext_resource type="AudioStream" uid="uid://con0sqonniuym" path="res://Music/fire.ogg" id="7_ao4h1"]
-[ext_resource type="PackedScene" uid="uid://mwglo7f5ldtx" path="res://level2Rocks.tscn" id="7_f8qf7"]
+[ext_resource type="PackedScene" uid="uid://mwglo7f5ldtx" path="res://Scenes/level2Rocks.tscn" id="7_f8qf7"]
 [ext_resource type="Script" uid="uid://devs85n0h15dr" path="res://Scripts/SignalBus.cs" id="8_lmdar"]
 [ext_resource type="PackedScene" uid="uid://bf1a8ug4uwghb" path="res://Scenes/pause.tscn" id="9_d1swa"]
 [ext_resource type="Texture2D" uid="uid://cka3tj67m48ym" path="res://Art/Confetti.png" id="10_ipaot"]
-[ext_resource type="PackedScene" uid="uid://bgs3ot6ys5yn6" path="res://UIScreen.tscn" id="12_ngp1c"]
+[ext_resource type="PackedScene" uid="uid://bgs3ot6ys5yn6" path="res://Scenes/UIScreen.tscn" id="12_ngp1c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)

@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://devs85n0h15dr" path="res://Scripts/SignalBus.cs" id="5_kri6y"]
 [ext_resource type="PackedScene" uid="uid://bf1a8ug4uwghb" path="res://Scenes/pause.tscn" id="6_4d3fe"]
 [ext_resource type="Texture2D" uid="uid://cka3tj67m48ym" path="res://Art/Confetti.png" id="7_3ipdw"]
-[ext_resource type="PackedScene" uid="uid://bgs3ot6ys5yn6" path="res://UIScreen.tscn" id="8_8h4de"]
+[ext_resource type="PackedScene" uid="uid://bgs3ot6ys5yn6" path="res://Scenes/UIScreen.tscn" id="8_8h4de"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e231j"]
 size = Vector2(583, 73)
