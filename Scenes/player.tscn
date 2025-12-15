@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dktyi0tyvsyqp"]
+[gd_scene load_steps=49 format=3 uid="uid://dktyi0tyvsyqp"]
 
 [ext_resource type="Script" uid="uid://b68vgg378wbeo" path="res://Scripts/Player.cs" id="1_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://bw2j1larpwer1" path="res://Scenes/rock.tscn" id="2_i3pqv"]
@@ -6,15 +6,36 @@
 [ext_resource type="PackedScene" uid="uid://coo6klj3plb8e" path="res://Scenes/boulder.tscn" id="4_3smsa"]
 [ext_resource type="Texture2D" uid="uid://cp7b6ell8p8df" path="res://Art/Arrow.png" id="4_hqtel"]
 [ext_resource type="PackedScene" uid="uid://l8uvxcyoimr2" path="res://Scenes/fish.tscn" id="4_x3wgy"]
+[ext_resource type="Texture2D" uid="uid://bri4pncbp1eqt" path="res://Art/CharacterCreation/Hat/Bandanna.png" id="6_8gxox"]
+[ext_resource type="Texture2D" uid="uid://c4rwkdnwqruqf" path="res://Art/CharacterCreation/Accessory/Chin.png" id="6_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://4biod6k54tkq" path="res://Art/CharacterCreation/Base/Arm.png" id="6_ukyrk"]
 [ext_resource type="Texture2D" uid="uid://cui2xbd3docwq" path="res://Art/CharacterCreation/Base/Body.png" id="7_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://4hvq8p7lyqh3" path="res://Art/CharacterCreation/Hat/Beanie.png" id="7_11gg7"]
+[ext_resource type="Texture2D" uid="uid://ddf642ybxvmg4" path="res://Art/CharacterCreation/Accessory/Frames.png" id="7_olqyp"]
 [ext_resource type="Texture2D" uid="uid://uiabbphh0k26" path="res://Art/CharacterCreation/Base/Leg.png" id="8_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://bqupre7bsqh8h" path="res://Art/CharacterCreation/Hat/Cowboy Hat.png" id="8_qpa8y"]
 [ext_resource type="Texture2D" uid="uid://cxi22b1erfuh7" path="res://Art/CharacterCreation/Base/Head.png" id="9_fd4e3"]
+[ext_resource type="Texture2D" uid="uid://cej2376m7haku" path="res://Art/CharacterCreation/Hat/Egg.png" id="9_sbwqj"]
+[ext_resource type="Texture2D" uid="uid://1edx00so0f1p" path="res://Art/CharacterCreation/Accessory/Monocle.png" id="9_wpjfl"]
+[ext_resource type="Texture2D" uid="uid://b18r1fd4co7t6" path="res://Art/CharacterCreation/Accessory/Nostril.png" id="10_bi64h"]
 [ext_resource type="Texture2D" uid="uid://c8h2tnapfl3yd" path="res://Art/CharacterCreation/Face/Zuko.png" id="10_qqcod"]
+[ext_resource type="Texture2D" uid="uid://cvq1emos6dsoo" path="res://Art/CharacterCreation/Hat/HeadThing.png" id="10_xwi16"]
+[ext_resource type="Texture2D" uid="uid://qe3frda1d4b0" path="res://Art/CharacterCreation/Accessory/Sunglasses.png" id="11_2ijsl"]
 [ext_resource type="Texture2D" uid="uid://ce5eohu3s8hih" path="res://Art/CharacterCreation/Accessory/Glasses.png" id="11_igrcy"]
 [ext_resource type="Texture2D" uid="uid://c3pab24rqu1vf" path="res://Art/CharacterCreation/Hat/SantaHat.png" id="12_fs7ks"]
+[ext_resource type="Texture2D" uid="uid://ct7jdanchfolt" path="res://Art/CharacterCreation/Hat/Spikes.png" id="12_sweqm"]
+[ext_resource type="Texture2D" uid="uid://dda10apxr1iau" path="res://Art/CharacterCreation/Hat/Tophat.png" id="13_ph33w"]
 [ext_resource type="AudioStream" uid="uid://dxn3pf6mxjk31" path="res://Music/Dead.mp3" id="14_7dp3o"]
+[ext_resource type="Texture2D" uid="uid://ccqbjli7aeeps" path="res://Art/CharacterCreation/Hat/Wizard.png" id="14_7ldla"]
 [ext_resource type="AudioStream" uid="uid://ct2pexx5mg3jt" path="res://Music/Whoosh.mp3" id="15_h4iuc"]
+[ext_resource type="Texture2D" uid="uid://ckyn56ckgwv3a" path="res://Art/CharacterCreation/Face/Angry.png" id="15_r7t2e"]
+[ext_resource type="Texture2D" uid="uid://da6wpqqv0qe0e" path="res://Art/CharacterCreation/Face/Chonk.png" id="16_nmr2m"]
+[ext_resource type="Texture2D" uid="uid://bffl1l60sk80f" path="res://Art/CharacterCreation/Face/Happy.png" id="17_ax3m3"]
+[ext_resource type="Texture2D" uid="uid://r1magqyhxctj" path="res://Art/CharacterCreation/Face/HappyEvil.png" id="18_3vlem"]
+[ext_resource type="Texture2D" uid="uid://rtkytblhodr4" path="res://Art/CharacterCreation/Face/Scar.png" id="19_8eeqe"]
+[ext_resource type="Texture2D" uid="uid://bcwsfl2ila3tl" path="res://Art/CharacterCreation/Face/SeenThings.png" id="20_5x828"]
+[ext_resource type="Texture2D" uid="uid://cb1n8ntypcsi2" path="res://Art/CharacterCreation/Face/Sigma.png" id="21_c1k8q"]
+[ext_resource type="Texture2D" uid="uid://iqvei070gh17" path="res://Art/CharacterCreation/Face/Smiley.png" id="22_e6mvm"]
 
 [sub_resource type="Animation" id="Animation_olqyp"]
 length = 0.001
@@ -691,6 +712,9 @@ rock = ExtResource("2_i3pqv")
 bomb = ExtResource("3_x3wgy")
 boulder = ExtResource("4_3smsa")
 fish = ExtResource("4_x3wgy")
+hats = Array[Texture2D]([ExtResource("6_8gxox"), ExtResource("7_11gg7"), ExtResource("8_qpa8y"), ExtResource("9_sbwqj"), ExtResource("10_xwi16"), ExtResource("12_fs7ks"), ExtResource("12_sweqm"), ExtResource("13_ph33w"), ExtResource("14_7ldla")])
+face = Array[Texture2D]([ExtResource("15_r7t2e"), ExtResource("16_nmr2m"), ExtResource("17_ax3m3"), ExtResource("18_3vlem"), ExtResource("19_8eeqe"), ExtResource("20_5x828"), ExtResource("21_c1k8q"), ExtResource("22_e6mvm"), ExtResource("10_qqcod")])
+accessory = Array[Texture2D]([ExtResource("6_l6n3p"), ExtResource("7_olqyp"), ExtResource("11_igrcy"), ExtResource("9_wpjfl"), ExtResource("10_bi64h"), ExtResource("11_2ijsl")])
 
 [node name="Icon" type="Node2D" parent="."]
 process_mode = 3

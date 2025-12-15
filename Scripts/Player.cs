@@ -23,12 +23,23 @@ public partial class Player : CharacterBody2D
 	[Export] public PackedScene bomb;
 	[Export] public PackedScene boulder;
 	[Export] public PackedScene fish;
+	
+	[Export] public Array<Texture2D> hats = new Array<Texture2D>();
+	[Export] public Array<Texture2D> face = new Array<Texture2D>();
+	[Export] public Array<Texture2D> accessory = new Array<Texture2D>();
 
 	public override void _Ready()
 	{
-		GetNode<Sprite2D>("Icon/Head/Hat").Texture=GD.Load<Texture2D>(GetRandomFile("res://Art/CharacterCreation/Hat/"));
-		GetNode<Sprite2D>("Icon/Head/Face").Texture=GD.Load<Texture2D>(GetRandomFile("res://Art/CharacterCreation/Face/"));
-		GetNode<Sprite2D>("Icon/Head/Accessory").Texture=GD.Load<Texture2D>(GetRandomFile("res://Art/CharacterCreation/Accessory/"));
+		int index = GD.RandRange(0, accessory.Count - 1);
+		Texture2D randomAccessory = accessory[index];
+		int indexh = GD.RandRange(0, hats.Count - 1);
+		Texture2D randomHat = hats[index];
+		int indexG = GD.RandRange(0, face.Count - 1);
+		Texture2D randomFace = face[index];
+		GD.Print(randomAccessory);
+		GetNode<Sprite2D>("Icon/Head/Hat").Texture=randomHat;
+		GetNode<Sprite2D>("Icon/Head/Face").Texture=randomFace;
+		GetNode<Sprite2D>("Icon/Head/Accessory").Texture=randomAccessory;
 		animator=GetNode<AnimationPlayer>("Icon/Controller");
 		//Modulate = GetRandomColor();
 		GetNode<RichTextLabel>("RichTextLabel").Text = "Player " + ID+1;
